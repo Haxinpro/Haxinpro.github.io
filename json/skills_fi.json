@@ -1,0 +1,719 @@
+{
+    "skills": [
+        {
+            "key": "csharp",
+            "name": "C#",
+            "level": "Edistynyt",
+            "xp": 1200,
+            "maxXp": 2500,
+            "description": "Moderni olio-ohjelmointikieli sovelluksiin, peleihin ja palveluihin.",
+            "tiers": [
+                {
+                    "title": "Aloittelija",
+                    "skills": [
+                        {
+                            "name": "Perussyntaksi",
+                            "status": "done"
+                        },
+                        {
+                            "name": "Ehtolauseet, silmukat",
+                            "status": "done"
+                        },
+                        {
+                            "name": "Funktiot ja metodit",
+                            "status": "done"
+                        },
+                        {
+                            "name": "Luokat ja oliot",
+                            "status": "done"
+                        }
+                    ]
+                },
+                {
+                    "title": "Kehittyvä",
+                    "skills": [
+                        {
+                            "name": "Perintä, interface",
+                            "status": "done"
+                        },
+                        {
+                            "name": "Abstract class, Enumit",
+                            "status": "done"
+                        },
+                        {
+                            "name": "Collections",
+                            "status": "learning"
+                        },
+                        {
+                            "name": "Namespaces",
+                            "status": "done"
+                        }
+                    ]
+                },
+                {
+                    "title": "Edistynyt",
+                    "skills": [
+                        {
+                            "name": "LINQ",
+                            "status": "learning"
+                        },
+                        {
+                            "name": "Events & Delegates",
+                            "status": "learning"
+                        },
+                        {
+                            "name": "Async/await",
+                            "status": "learning"
+                        },
+                        {
+                            "name": "File I/O",
+                            "status": "learning"
+                        },
+                        {
+                            "name": "Unit Testaus",
+                            "status": "pending"
+                        },
+                        {
+                            "name": "Dependency Injection",
+                            "status": "pending"
+                        }
+                    ]
+                },
+                {
+                    "title": "Ekspertti",
+                    "skills": [
+                        {
+                            "name": "Design Patterns",
+                            "status": "pending"
+                        },
+                        {
+                            "name": "Reflection",
+                            "status": "pending"
+                        },
+                        {
+                            "name": "Memory Management",
+                            "status": "pending"
+                        }
+                    ]
+                },
+                {
+                    "title": "Mestari",
+                    "skills": [
+                        {
+                            "name": "Arkkitehtuurin suunnittelu",
+                            "status": "pending"
+                        },
+                        {
+                            "name": "Generics",
+                            "status": "pending"
+                        },
+                        {
+                            "name": "Roslyn API",
+                            "status": "pending"
+                        },
+                        {
+                            "name": "Omat kirjastot / NuGet",
+                            "status": "pending"
+                        },
+                        {
+                            "name": "Low-level operointi",
+                            "status": "pending"
+                        },
+                        {
+                            "name": "Open source kontributiot",
+                            "status": "pending"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "css",
+            "name": "CSS",
+            "level": "Edistynyt",
+            "xp": 1200,
+            "maxXp": 2200,
+            "description": "Tyylikieli web‑sivujen ulkoasun, asettelun ja responsiivisuuden määrittelyyn modernin designin tueksi.",
+            "tiers": [
+              {
+                "title": "Aloittelija",
+                "skills": [
+                  { "name": "Perussyntaksi ja valitsimet", "status": "done" },
+                  { "name": "Värit, taustat ja reunat", "status": "done" },
+                  { "name": "Typografia (fontit, koko, riviväli)", "status": "done" },
+                  { "name": "Box‑malli (margin, padding, border)", "status": "done" }
+                ]
+              },
+              {
+                "title": "Kehittyvä",
+                "skills": [
+                  { "name": "Layout (display, position)", "status": "done" },
+                  { "name": "Flexbox", "status": "done" },
+                  { "name": "Grid‑järjestelmä", "status": "done" },
+                  { "name": "Media‑kyselyt (responsiivisuus)", "status": "done" },
+                  { "name": "Pseudoluokat ja ‑elementit", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Edistynyt",
+                "skills": [
+                  { "name": "Siirtymät ja animaatiot (transitions, animations)", "status": "done" },
+                  { "name": "Muunnokset (transform)", "status": "done" },
+                  { "name": "CSS‑muuttujat (custom properties)", "status": "learning" },
+                  { "name": "Laskennalliset funktiot (calc(), min(), max())", "status": "learning" },
+                  { "name": "Gradientit ja kuvataustat", "status": "done" }
+                ]
+              },
+              {
+                "title": "Ekspertti",
+                "skills": [
+                  { "name": "Esiprosessorit (Sass, Less)", "status": "pending" },
+                  { "name": "Asettelu‑arkkitehtuurit (BEM, OOCSS)", "status": "pending" },
+                  { "name": "Suorituskykyoptimointi ja latauksen hallinta", "status": "pending" },
+                  { "name": "Saavutettavuus ja contrast‑vaatimukset", "status": "pending" },
+                  { "name": "CSS‑in‑JS ja modulaariset järjestelmät", "status": "learning" }
+                ]
+              },
+              {
+                "title": "Mestari",
+                "skills": [
+                  { "name": "CSS‑spesifikaation kehitys ja kontribuutiot", "status": "pending" },
+                  { "name": "CSS Houdini ja low‑level API:t", "status": "pending" },
+                  { "name": "Monimutkaiset layoutit (subgrid, masonry)", "status": "pending" },
+                  { "name": "Oman tyylikirjaston tai frameworkin luonti", "status": "pending" }
+                ]
+              }
+            ]
+          },
+        {
+            "key": "python",
+            "name": "Python",
+            "level": "Kehittyvä",
+            "xp": 700,
+            "maxXp": 2500,
+            "description": "Monipuolinen korkean tason ohjelmointikieli, jota käytetään laajalti mm. web‑kehityksessä, data‑analyysissä ja automaatiossa.",
+            "tiers": [
+              {
+                "title": "Aloittelija",
+                "skills": [
+                  { "name": "Perussyntaksi ja muuttujat", "status": "done" },
+                  { "name": "Ehtolauseet ja silmukat", "status": "done" },
+                  { "name": "Funktiot ja modulit", "status": "done" },
+                  { "name": "Listat, tuplet ja sanakirjat", "status": "done" },
+                  { "name": "Perustason tiedostokäsittely", "status": "done" }
+                ]
+              },
+              {
+                "title": "Kehittyvä",
+                "skills": [
+                  { "name": "Oliot ja luokat (OOP)", "status": "done" },
+                  { "name": "Virheiden hallinta (try‑except)", "status": "done" },
+                  { "name": "Moduulien paketointi ja hallinta", "status": "pending" },
+                  { "name": "Virtuaaliympäristöt (venv, conda)", "status": "pending" },
+                  { "name": "Yksikkötestaus (unittest, pytest)", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Edistynyt",
+                "skills": [
+                  { "name": "Dekoraattorit ja generaattorit", "status": "pending" },
+                  { "name": "List/dict comprehensionit", "status": "pending" },
+                  { "name": "Lambda‑funktiot ja funktionaalinen ohjelmointi", "status": "pending" },
+                  { "name": "Asyncio ja asynkronisuus", "status": "pending" },
+                  { "name": "Web‑kehitys (Django, Flask, FastAPI)", "status": "pending" },
+                  { "name": "Tietokannat ja ORM (SQLAlchemy)", "status": "pending" },
+                  { "name": "Data‑analyysi (Pandas, NumPy)", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Ekspertti",
+                "skills": [
+                  { "name": "Monisäikeisyys ja rinnakkaislaskenta", "status": "pending" },
+                  { "name": "C‑laajennukset ja suorituskykyoptimointi", "status": "pending" },
+                  { "name": "Datatiede ja koneoppiminen (scikit‑learn, TensorFlow)", "status": "pending" },
+                  { "name": "Pythonin sisäinen rakenne (CPython)", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Mestari",
+                "skills": [
+                  { "name": "CPython‑projektin kontribuutiot", "status": "pending" },
+                  { "name": "Kieliarkkitehtuuri ja suunnittelumallit", "status": "pending" },
+                  { "name": "Kirjastojen ylläpito ja avoimen lähdekoodin hallinta", "status": "pending" },
+                  { "name": "Edistyneet suorituskykyoptimoinnit ja muistin hallinta", "status": "pending" }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "cpp",
+            "name": "C++",
+            "level": "Aloittelija",
+            "xp": 100,
+            "maxXp": 2500,
+            "description": "Tehokas, järjestelmäläheinen ohjelmointikieli suorituskykykriittisiin sovelluksiin ja järjestelmäohjelmointiin.",
+            "tiers": [
+              {
+                "title": "Aloittelija",
+                "skills": [
+                  { "name": "Perussyntaksi ja muuttujat", "status": "done" },
+                  { "name": "Ehtolauseet ja silmukat", "status": "pending" },
+                  { "name": "Funktiot ja nimetyt tilat", "status": "pending" },
+                  { "name": "Osoittimet ja viittaukset", "status": "pending" },
+                  { "name": "Perustason tiedostokäsittely", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Kehittyvä",
+                "skills": [
+                  { "name": "Luokat ja olio‑orientaatio", "status": "pending" },
+                  { "name": "RAII ja resurssien hallinta", "status": "pending" },
+                  { "name": "STL‑kontainerit ja algoritmit", "status": "pending" },
+                  { "name": "Poitinmallit (templates) perusteet", "status": "pending" },
+                  { "name": "Poikkeusten käsittely", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Edistynyt",
+                "skills": [
+                  { "name": "Mallipohjainen ohjelmointi (templates)", "status": "pending" },
+                  { "name": "Älykkäät osoittimet (smart pointers)", "status": "pending" },
+                  { "name": "Siirtosemanttiikat (move semantics)", "status": "pending" },
+                  { "name": "Lambda‑ilmaisut ja funktionaalinen C++", "status": "pending" },
+                  { "name": "Constexpr‑funktionaalisuus ja metatason laskenta", "status": "pending" },
+                  { "name": "Monisäikeisyys ja rinnakkaisuus (std::thread)", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Ekspertti",
+                "skills": [
+                  { "name": "Mallimetapuheen ohjelmointi (template metaprogramming)", "status": "pending" },
+                  { "name": "Oman muistiallokoinnin toteutus", "status": "pending" },
+                  { "name": "Suorituskyvyn optimointi ja profilointi", "status": "pending" },
+                  { "name": "Boost‑kirjastot ja muut ekosysteemin työkalut", "status": "pending" },
+                  { "name": "Edistynyt muistin hallinta ja datarakenteet", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Mestari",
+                "skills": [
+                  { "name": "ISO C++ -standardin kehitys ja kontribuutiot", "status": "pending" },
+                  { "name": "Kääntäjäsisäiset toiminnallisuudet ja laajennukset", "status": "pending" },
+                  { "name": "Suurten järjestelmäprojektien arkkitehtuuri", "status": "pending" },
+                  { "name": "Asm‑integraatio ja alhaisen tason optimoinnit", "status": "pending" }
+                ]
+              }
+            ]
+          }
+          ,
+          {
+            "key": "javascript",
+            "name": "JavaScript",
+            "level": "Aloittelija",
+            "xp": 1200,
+            "maxXp": 2200,
+            "description": "Korkean tason tulkattu kieli web‑kehitykseen sekä asiakas‑ että palvelinpuolella (Node.js), dynaamisella tyypityksellä ja prototyyppipohjaisella periytymisellä.",
+            "tiers": [
+              {
+                "title": "Aloittelija",
+                "skills": [
+                  { "name": "Perussyntaksi ja muuttujat", "status": "done" },
+                  { "name": "Tietotyypit (merkkijono, numero, totuusarvo)", "status": "done" },
+                  { "name": "Ehtolauseet ja silmukat", "status": "done" },
+                  { "name": "Funktiot ja skooppi", "status": "done" },
+                  { "name": "Taulukot ja oliot", "status": "done" }
+                ]
+              },
+              {
+                "title": "Kehittyvä",
+                "skills": [
+                  { "name": "DOM‑manipulointi ja tapahtumankäsittely", "status": "done" },
+                  { "name": "Sulkeet ja leksikaalinen skooppi", "status": "learning" },
+                  { "name": "Prototyyppipohjainen periytyminen", "status": "learning" },
+                  { "name": "Takaisinkutsufunktiot", "status": "done" },
+                  { "name": "JSON‑käsittely (parsiminen ja sarjoittaminen)", "status": "done" }
+                ]
+              },
+              {
+                "title": "Edistynyt",
+                "skills": [
+                  { "name": "Promise‑ketjutus", "status": "done" },
+                  { "name": "Async/await", "status": "learning" },
+                  { "name": "ES6+‑moduulit (import/export)", "status": "learning" },
+                  { "name": "Fetch‑API / AJAX", "status": "learning" },
+                  { "name": "Virheenkäsittely (try/catch)", "status": "learning" },
+                  { "name": "Tapahtumasilmukka ja rinnakkaisuusmalli", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Ekspertti",
+                "skills": [
+                  { "name": "Suunnittelumallit (Moduuli, Havainnoija, Tehdas)", "status": "pending" },
+                  { "name": "Suorituskyvyn optimointi ja muistin profilointi", "status": "pending" },
+                  { "name": "Yksikkö- ja integrointitestaus (Jest, Mocha)", "status": "pending" },
+                  { "name": "TypeScriptin perusteet", "status": "pending" },
+                  { "name": "Työkaluketju (Webpack, Babel)", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Mestari",
+                "skills": [
+                  { "name": "JavaScript‑moottorin sisäiset toiminnot (V8, SpiderMonkey)", "status": "pending" },
+                  { "name": "Spesifikaation (ECMAScript) kontribuutiot", "status": "pending" },
+                  { "name": "Suurten sovellusten arkkitehtuuri", "status": "pending" },
+                  { "name": "Kääntäjä- ja transpilointityökalujen suunnittelu", "status": "pending" }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "html",
+            "name": "HTML",
+            "level": "Kehittyvä",
+            "xp": 1200,
+            "maxXp": 2200,
+            "description": "Merkintäkieli web‑sivujen rakenteen ja sisällön määrittelyyn, perustana kaikelle verkkosisällölle.",
+            "tiers": [
+              {
+                "title": "Aloittelija",
+                "skills": [
+                  { "name": "Perusrakenteen (DOCTYPE, html, head, body) tuntemus", "status": "done" },
+                  { "name": "Otsikot (h1–h6) ja kappaleet (p)", "status": "done" },
+                  { "name": "Linkit (a) ja kuvat (img)", "status": "done" },
+                  { "name": "Listat (ul, ol, li)", "status": "done" },
+                  { "name": "Perusmuotoilu (strong, em, span)", "status": "done" }
+                ]
+              },
+              {
+                "title": "Kehittyvä",
+                "skills": [
+                  { "name": "Taulukot (table, tr, td)", "status": "done" },
+                  { "name": "Lomakkeet (form, input, button)", "status": "done" },
+                  { "name": "Semanttiset elementit (section, article, nav)", "status": "done" },
+                  { "name": "Multimedia (audio, video)", "status": "done" },
+                  { "name": "IFrame‑käyttö", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Edistynyt",
+                "skills": [
+                  { "name": "Responsiivinen meta‑viewport ja kuvien koko", "status": "done" },
+                  { "name": "SVG- ja canvas‑piirtäminen", "status": "learning" },
+                  { "name": "ARIA‑roolit ja saavutettavuusominaisuudet", "status": "pending" },
+                  { "name": "Microdata ja schema.org‑merkinnät", "status": "pending" },
+                  { "name": "Custom data‑attribuutit (data-*)", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Ekspertti",
+                "skills": [
+                  { "name": "HTML5‑API:t (geolokaatio, localStorage, sessionStorage)", "status": "pending" },
+                  { "name": "Web Workers ja Service Workers", "status": "pending" },
+                  { "name": "Mukautettujen elementtien perustaminen (Web Components)", "status": "pending" },
+                  { "name": "Canvas‑perusteiset interaktiot ja animaatiot", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Mestari",
+                "skills": [
+                  { "name": "Kontribuutiot HTML‑spesifikaatioon", "status": "pending" },
+                  { "name": "Saavutettavuusstandardien kehitys ja auditointi", "status": "pending" },
+                  { "name": "Monikielisyys ja kansainvälistäminen (lang-attribuutit)", "status": "pending" },
+                  { "name": "Suuren mittakaavan web‑arkkitehtuurin suunnittelu", "status": "pending" }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "blender_animation",
+            "name": "Blender Animation",
+            "level": "Intermediate",
+            "xp": 1200,
+            "maxXp": 2200,
+            "description": "Blenderin animaatiotyökalut hahmoanimaatiosta simulaatioihin ja liikkeenhallintaan.",
+            "tiers": [
+              {
+                "title": "Aloittelija",
+                "skills": [
+                  { "name": "Käyttöliittymän navigointi ja perusobjektien luominen", "status": "done" },
+                  { "name": "Sijainti-, kierto- ja skaalausavainkehykset", "status": "done" },
+                  { "name": "Timeline- ja Dope Sheet -editorin käyttö", "status": "done" },
+                  { "name": "Graph Editorin perusteet", "status": "done" },
+                  { "name": "Perusliikeinterpolaatio (Linear, Bezier)", "status": "done" }
+                ]
+              },
+              {
+                "title": "Kehittyvä",
+                "skills": [
+                  { "name": "Riggausperusteet (armature ja luut)", "status": "done" },
+                  { "name": "Pose Mode ja hahmoanimaation avainkehykset", "status": "done" },
+                  { "name": "Path-animaatiot (Curves ja Follow Path)", "status": "learning" },
+                  { "name": "Animation Constraints (Copy Location, Track To)", "status": "pending" },
+                  { "name": "Action Editorin ja NLA:n esittely", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Edistynyt",
+                "skills": [
+                  { "name": "NLA Editor ja action-sekoitukset", "status": "pending" },
+                  { "name": "Muotosuotimet ja shape keys", "status": "pending" },
+                  { "name": "Graph Editorin edistyneet F-curve-muokkaukset", "status": "learning" },
+                  { "name": "Fyysiset simulaatioavainkehykset (cloth, fluid)", "status": "pending" },
+                  { "name": "Kameran liikepolut ja dolly-track-animaatio", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Ekspertti",
+                "skills": [
+                  { "name": "IK/FK-riggaus ja vaihtomekanismit", "status": "learning" },
+                  { "name": "Drivers ja custom properties -animaatiot", "status": "pending" },
+                  { "name": "Python-skriptit animaatioiden automatisointiin", "status": "pending" },
+                  { "name": "Motion capture -datan tuonti ja retargeting", "status": "pending" },
+                  { "name": "Animaatioiden bake ja performanssioptimointi", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Mestari",
+                "skills": [
+                  { "name": "Kontribuutiot Blenderin animaatiomoottoriin", "status": "pending" },
+                  { "name": "Lisäosien (addons) kehittäminen animaatiotyökaluille", "status": "pending" },
+                  { "name": "Monimutkaisten animaatioputkien suunnittelu ja ylläpito", "status": "pending" },
+                  { "name": "Integraatio muihin pipeline-järjestelmiin (Unreal, Unity)", "status": "pending" },
+                  { "name": "Animointitiimien johtaminen ja koordinointi", "status": "pending" }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "blender_modeling",
+            "name": "Blender Mallinnus",
+            "level": "Intermediate",
+            "xp": 1200,
+            "maxXp": 2200,
+            "description": "Verkko‑ ja pinnallismallinnuksen työkalut Blenderissä sekä perus‑ että edistyneet tekniikat.",
+            "tiers": [
+              {
+                "title": "Aloittelija",
+                "skills": [
+                  { "name": "UI‑navigointi ja 3D‑näkymän hallinta", "status": "done" },
+                  { "name": "Primitiivien luominen ja muokkaus", "status": "done" },
+                  { "name": "Edit‑tilan perusmuunnokset (translate, rotate, scale)", "status": "done" },
+                  { "name": "Valintatyökalut (vertex, edge, face)", "status": "done" },
+                  { "name": "Perusmesh‑operaatiot (extrude, inset)", "status": "done" }
+                ]
+              },
+              {
+                "title": "Kehittyvä",
+                "skills": [
+                  { "name": "Modifierit (Mirror, Subdivision Surface)", "status": "learning" },
+                  { "name": "Loop cut ja bevel‑työkalut", "status": "learning" },
+                  { "name": "Proportional Editing ja Snapping", "status": "learning" },
+                  { "name": "Origin‑pisteen ja pivotin hallinta", "status": "pending" },
+                  { "name": "Basic retopology‑työkalut", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Edistynyt",
+                "skills": [
+                  { "name": "UV‑unwrapping ja seam‑merkinnät", "status": "learning" },
+                  { "name": "Shape keys ja vertex groups", "status": "learning" },
+                  { "name": "Sculpt‑muokkauksen perusteet", "status": "pending" },
+                  { "name": "Hard‑surface‑mallinnus (boolean‑tekniikat)", "status": "pending" },
+                  { "name": "Organic‑mallinnus ja topologia", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Ekspertti",
+                "skills": [
+                  { "name": "Geometry Nodes –perusteet", "status": "pending" },
+                  { "name": "Advanced retopology ja decimate‑työkalut", "status": "pending" },
+                  { "name": "Procedural‑mallinnus Geometry Nodesilla", "status": "pending" },
+                  { "name": "Custom normals ja edge flow optimointi", "status": "pending" },
+                  { "name": "Addonsien käyttö mallinnuksen tehostamiseen", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Mestari",
+                "skills": [
+                  { "name": "Kattavat Geometry Nodes -verkostot", "status": "pending" },
+                  { "name": "Luo oma mallinnuslisäosa Pythonilla", "status": "pending" },
+                  { "name": "Complex procedural environments", "status": "pending" },
+                  { "name": "Pipeline‑integraatio (Unreal, Unity)", "status": "pending" },
+                  { "name": "Tiimin mallinnusprosessin johtaminen", "status": "pending" }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "unreal",
+            "name": "Unreal Engine 5",
+            "level": "Intermediate",
+            "xp": 1200,
+            "maxXp": 2200,
+            "description": "Kattava reaaliaikainen 3D‑moottori peleihin, simulaatioihin ja interaktiivisiin kokemuksiin, tukien sekä Blueprint‑skriptausta että C++‑kehitystä.",
+            "tiers": [
+              {
+                "title": "Aloittelija",
+                "skills": [
+                  { "name": "Editorin käyttöliittymän navigointi ja näkymän hallinta", "status": "done" },
+                  { "name": "Perusprojektien luonti ja hallinta", "status": "done" },
+                  { "name": "Actorien sijoittaminen ja yksinkertaisen kohtauksen koostaminen", "status": "done" },
+                  { "name": "Perusmateriaalien luominen", "status": "done" },
+                  { "name": "Sisäänrakennettujen geometriatyökalujen käyttö (Brushit, BSP)", "status": "done" }
+                ]
+              },
+              {
+                "title": "Kehittyvä",
+                "skills": [
+                  { "name": "Blueprint‑visuaaliskriptauksen perusteet", "status": "done" },
+                  { "name": "C++‑luokkien integrointi ja työnkulku", "status": "learning" },
+                  { "name": "Taso‑suunnittelun perusteet", "status": "learning" },
+                  { "name": "Valaistuksen asetukset ja light baking", "status": "learning" },
+                  { "name": "Yksinkertaiset fysiikka‑ ja törmäysasetukset", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Edistynyt",
+                "skills": [
+                  { "name": "Edistyneet Blueprint‑mallit ja makrot", "status": "learning" },
+                  { "name": "Omat shaderit Materiaalieditorilla", "status": "learning" },
+                  { "name": "Animaatioblueprintit ja tilakoneet", "status": "learning" },
+                  { "name": "AI‑käyttäytymispuut ja navigaatiomeshit", "status": "pending" },
+                  { "name": "Verkko‑ ja moninpelireplikaation perusteet", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Ekspertti",
+                "skills": [
+                  { "name": "Suorituskyvyn profilointi ja optimointi", "status": "pending" },
+                  { "name": "Omat C++‑lisäosat ja moduulit", "status": "pending" },
+                  { "name": "Edistynyt verkkoyhteistyö ja dedikoidut palvelimet", "status": "pending" },
+                  { "name": "VR/AR‑toteutus ja optimointi", "status": "pending" },
+                  { "name": "Pipelinen automatisointi Pythonilla ja Editor‑skriptauksella", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Mestari",
+                "skills": [
+                  { "name": "Enginen lähdekoodin muokkaus ja kontribuutiot", "status": "pending" },
+                  { "name": "Omat renderöintiominaisuudet ja lisäosat", "status": "pending" },
+                  { "name": "Suurten projektien arkkitehtuuri ja työnkulut", "status": "pending" },
+                  { "name": "Edistynyt proseduraalinen generointi (Niagara, Blueprint)", "status": "pending" },
+                  { "name": "Poikkitieteellisten kehitystiimien johtaminen", "status": "pending" }
+                ]
+              }
+            ]
+          }
+          ,
+          {
+            "key": "github",
+            "name": "GitHub",
+            "level": "Intermediate",
+            "xp": 1200,
+            "maxXp": 2200,
+            "description": "Sovellusalusta versionhallintaan, yhteistyöhön ja jatkuvaan integraatioon Git-arkistoille.",
+            "tiers": [
+              {
+                "title": "Aloittelija",
+                "skills": [
+                  { "name": "Repositoryn klonaus ja kopiointi", "status": "done" },
+                  { "name": "Peruscommit ja push/pull", "status": "done" },
+                  { "name": "GitHubin verkkokäyttöliittymän navigointi", "status": "done" },
+                  { "name": "README-tiedoston luominen ja muokkaus", "status": "done" }
+                ]
+              },
+              {
+                "title": "Kehittyvä",
+                "skills": [
+                  { "name": "Branchien luonti ja hallinta", "status": "learning" },
+                  { "name": "Merge ja rebase", "status": "learning" },
+                  { "name": "Pull requestien luominen ja tarkastus", "status": "learning" },
+                  { "name": "Issueiden seuranta ja projektitaulut", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Edistynyt",
+                "skills": [
+                  { "name": "GitHub Actions -työnkulut (workflow)", "status": "learning" },
+                  { "name": "CI/CD-putkien määrittäminen", "status": "learning" },
+                  { "name": "Code review -käytännöt ja tarkastustyökalut", "status": "pending" },
+                  { "name": "GitHub Pages -sivustojen julkaisu", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Ekspertti",
+                "skills": [
+                  { "name": "Turvallisuus- ja riippuvuusskannaus (Dependabot, code scanning)", "status": "pending" },
+                  { "name": "Moniprojektisen organisaation hallinta", "status": "pending" },
+                  { "name": "GitHub Apps ja mukautetut OAuth-sovellukset", "status": "pending" },
+                  { "name": "Monimutkaiset automaatiot GitHub Actionsilla", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Mestari",
+                "skills": [
+                  { "name": "GitHubin avoimen lähdekoodin kontribuutiot", "status": "pending" },
+                  { "name": "Omat GitHub Action -lisäosat ja työkalut", "status": "pending" },
+                  { "name": "Organisaatio- ja tiimitason politiikat", "status": "pending" },
+                  { "name": "Kattavien DevOps-pipelinejen suunnittelu", "status": "pending" }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "git",
+            "name": "Git",
+            "level": "Intermediate",
+            "xp": 1200,
+            "maxXp": 2200,
+            "description": "Jakautunut versionhallintajärjestelmä lähdekoodin muutosten seuraamiseen ohjelmistokehityksessä.",
+            "tiers": [
+              {
+                "title": "Aloittelija",
+                "skills": [
+                  { "name": "Repositoryn alustaminen (git init)", "status": "done" },
+                  { "name": "Repositoryn kloonaus (git clone)", "status": "done" },
+                  { "name": "Muutosten vaiheistus ja commit (git add, git commit)", "status": "done" },
+                  { "name": "Tilan ja erotusten tarkastelu (git status, git diff)", "status": "done" }
+                ]
+              },
+              {
+                "title": "Kehittyvä",
+                "skills": [
+                  { "name": "Haarojen hallinta ja vaihtaminen (git branch, git checkout)", "status": "learning" },
+                  { "name": "Haarojen yhdistäminen (git merge)", "status": "learning" },
+                  { "name": "Muutosten välimuistiin tallentaminen (git stash)", "status": "learning" },
+                  { "name": "Historiatietojen tarkastelu (git log, git reflog)", "status": "learning" }
+                ]
+              },
+              {
+                "title": "Edistynyt",
+                "skills": [
+                  { "name": "Rebase ja interaktiivinen rebase (git rebase)", "status": "pending" },
+                  { "name": "Cherry-pick‑komennot (git cherry-pick)", "status": "pending" },
+                  { "name": "Virheiden etsiminen bisect‑toiminnolla (git bisect)", "status": "pending" },
+                  { "name": "Aliarkistojen ja alipuiden käyttö (submodule, subtree)", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Ekspertti",
+                "skills": [
+                  { "name": "Hooks ja automaatio (pre-commit, post-receive)", "status": "pending" },
+                  { "name": "Worktree‑työtilat ja osittaiset kloonit", "status": "pending" },
+                  { "name": "Historian uudelleenkirjoitus (filter-branch, git filter-repo)", "status": "pending" },
+                  { "name": "Suorituskyvyn optimointi suurissa repositorioissa", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Mestari",
+                "skills": [
+                  { "name": "Kontribuutiot Gitin koodipohjaan", "status": "pending" },
+                  { "name": "Plumbing‑komennot (git cat-file, git update-index)", "status": "pending" },
+                  { "name": "Monimutkaisten haaramallien suunnittelu (Git Flow, trunk-based)", "status": "pending" },
+                  { "name": "Omat Git‑laajennukset ja skriptit", "status": "pending" }
+                ]
+              }
+            ]
+        }          
+    ]
+}

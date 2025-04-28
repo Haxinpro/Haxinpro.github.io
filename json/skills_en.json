@@ -1,0 +1,717 @@
+{
+    "skills": [
+        {
+            "key": "csharp",
+            "name": "C#",
+            "level": "Advanced",
+            "xp": 1200,
+            "maxXp": 2500,
+            "description": "A modern object-oriented programming language for applications, games, and services.",
+            "tiers": [
+                {
+                    "title": "Beginner",
+                    "skills": [
+                        {
+                            "name": "Basic syntax",
+                            "status": "done"
+                        },
+                        {
+                            "name": "Conditionals, loops",
+                            "status": "done"
+                        },
+                        {
+                            "name": "Functions and methods",
+                            "status": "done"
+                        },
+                        {
+                            "name": "Classes and objects",
+                            "status": "done"
+                        }
+                    ]
+                },
+                {
+                    "title": "Intermediate",
+                    "skills": [
+                        {
+                            "name": "Inheritance, interfaces",
+                            "status": "done"
+                        },
+                        {
+                            "name": "Abstract classes, enums",
+                            "status": "done"
+                        },
+                        {
+                            "name": "Collections",
+                            "status": "learning"
+                        },
+                        {
+                            "name": "Namespaces",
+                            "status": "done"
+                        }
+                    ]
+                },
+                {
+                    "title": "Advanced",
+                    "skills": [
+                        {
+                            "name": "LINQ",
+                            "status": "learning"
+                        },
+                        {
+                            "name": "Events & Delegates",
+                            "status": "learning"
+                        },
+                        {
+                            "name": "Async/await",
+                            "status": "learning"
+                        },
+                        {
+                            "name": "File I/O",
+                            "status": "learning"
+                        },
+                        {
+                            "name": "Unit testing",
+                            "status": "pending"
+                        },
+                        {
+                            "name": "Dependency Injection",
+                            "status": "pending"
+                        }
+                    ]
+                },
+                {
+                    "title": "Expert",
+                    "skills": [
+                        {
+                            "name": "Design Patterns",
+                            "status": "pending"
+                        },
+                        {
+                            "name": "Reflection",
+                            "status": "pending"
+                        },
+                        {
+                            "name": "Memory Management",
+                            "status": "pending"
+                        }
+                    ]
+                },
+                {
+                    "title": "Master",
+                    "skills": [
+                        {
+                            "name": "Architecture Design",
+                            "status": "pending"
+                        },
+                        {
+                            "name": "Generics",
+                            "status": "pending"
+                        },
+                        {
+                            "name": "Roslyn API",
+                            "status": "pending"
+                        },
+                        {
+                            "name": "Custom libraries / NuGet",
+                            "status": "pending"
+                        },
+                        {
+                            "name": "Low-level operations",
+                            "status": "pending"
+                        },
+                        {
+                            "name": "Open source contributions",
+                            "status": "pending"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "css",
+            "name": "CSS",
+            "level": "Intermediate",
+            "xp": 1200,
+            "maxXp": 2200,
+            "description": "Style sheet language for defining the appearance, layout, and responsiveness of web pages to support modern design.",
+            "tiers": [
+              {
+                "title": "Beginner",
+                "skills": [
+                  { "name": "Basic syntax and selectors", "status": "done" },
+                  { "name": "Colors, backgrounds, and borders", "status": "done" },
+                  { "name": "Typography (fonts, size, line-height)", "status": "done" },
+                  { "name": "Box model (margin, padding, border)", "status": "done" }
+                ]
+              },
+              {
+                "title": "Developing",
+                "skills": [
+                  { "name": "Layout (display, position)", "status": "done" },
+                  { "name": "Flexbox", "status": "done" },
+                  { "name": "Grid layout", "status": "done" },
+                  { "name": "Media queries (responsiveness)", "status": "done" },
+                  { "name": "Pseudo-classes and pseudo-elements", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Advanced",
+                "skills": [
+                  { "name": "Transitions and animations", "status": "done" },
+                  { "name": "Transforms", "status": "done" },
+                  { "name": "CSS variables (custom properties)", "status": "learning" },
+                  { "name": "Calculation functions (calc(), min(), max())", "status": "learning" },
+                  { "name": "Gradients and background images", "status": "done" }
+                ]
+              },
+              {
+                "title": "Expert",
+                "skills": [
+                  { "name": "Preprocessors (Sass, Less)", "status": "pending" },
+                  { "name": "Architecture methodologies (BEM, OOCSS)", "status": "pending" },
+                  { "name": "Performance optimization and critical CSS", "status": "pending" },
+                  { "name": "Accessibility and contrast requirements", "status": "pending" },
+                  { "name": "CSS-in-JS and modular styling systems", "status": "learning" }
+                ]
+              },
+              {
+                "title": "Master",
+                "skills": [
+                  { "name": "Contributions to the CSS specification", "status": "pending" },
+                  { "name": "CSS Houdini and low-level APIs", "status": "pending" },
+                  { "name": "Complex layouts (subgrid, masonry)", "status": "pending" },
+                  { "name": "Creating a custom style library or framework", "status": "pending" }
+                ]
+              }
+            ]
+          },
+        {
+            "key": "python",
+            "name": "Python",
+            "level": "Intermediate",
+            "xp": 700,
+            "maxXp": 2500,
+            "description": "Versatile high‑level programming language widely used in web development, data analysis and automation.",
+            "tiers": [
+              {
+                "title": "Beginner",
+                "skills": [
+                  { "name": "Basic syntax and variables", "status": "done" },
+                  { "name": "Conditionals and loops", "status": "done" },
+                  { "name": "Functions and modules", "status": "done" },
+                  { "name": "Lists, tuples and dictionaries", "status": "done" },
+                  { "name": "Basic file handling", "status": "done" }
+                ]
+              },
+              {
+                "title": "Developing",
+                "skills": [
+                  { "name": "Object‑oriented programming and classes", "status": "done" },
+                  { "name": "Error handling (try‑except)", "status": "done" },
+                  { "name": "Module packaging and distribution", "status": "pending" },
+                  { "name": "Virtual environments (venv, conda)", "status": "pending" },
+                  { "name": "Unit testing (unittest, pytest)", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Advanced",
+                "skills": [
+                  { "name": "Decorators and generators", "status": "pending" },
+                  { "name": "List/dict comprehensions", "status": "pending" },
+                  { "name": "Lambda functions & functional programming", "status": "pending" },
+                  { "name": "Asyncio and asynchronous programming", "status": "pending" },
+                  { "name": "Web development (Django, Flask, FastAPI)", "status": "pending" },
+                  { "name": "Databases & ORM (SQLAlchemy)", "status": "pending" },
+                  { "name": "Data analysis (Pandas, NumPy)", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Expert",
+                "skills": [
+                  { "name": "Multithreading & concurrency", "status": "pending" },
+                  { "name": "C‑extensions & performance tuning", "status": "learning" },
+                  { "name": "Data science & machine learning (scikit‑learn, TensorFlow)", "status": "pending" },
+                  { "name": "Python internals (CPython)", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Master",
+                "skills": [
+                  { "name": "Contributions to CPython project", "status": "pending" },
+                  { "name": "Language architecture & design patterns", "status": "pending" },
+                  { "name": "Library maintenance & open‑source leadership", "status": "pending" },
+                  { "name": "Advanced performance optimizations & memory management", "status": "pending" }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "cpp",
+            "name": "C++",
+            "level": "Beginner",
+            "xp": 100,
+            "maxXp": 2500,
+            "description": "Powerful systems‑level programming language for performance‑critical applications and system programming.",
+            "tiers": [
+              {
+                "title": "Beginner",
+                "skills": [
+                  { "name": "Basic syntax and variables", "status": "done" },
+                  { "name": "Conditionals and loops", "status": "pending" },
+                  { "name": "Functions and namespaces", "status": "pending" },
+                  { "name": "Pointers and references", "status": "pending" },
+                  { "name": "Basic file handling", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Developing",
+                "skills": [
+                  { "name": "Classes and object‑oriented programming", "status": "pending" },
+                  { "name": "RAII and resource management", "status": "pending" },
+                  { "name": "STL containers and algorithms", "status": "pending" },
+                  { "name": "Templates basics", "status": "pending" },
+                  { "name": "Exception handling", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Advanced",
+                "skills": [
+                  { "name": "Generic programming (advanced templates)", "status": "pending" },
+                  { "name": "Smart pointers", "status": "pending" },
+                  { "name": "Move semantics", "status": "pending" },
+                  { "name": "Lambda expressions & functional C++", "status": "pending" },
+                  { "name": "Constexpr & compile‑time programming", "status": "pending" },
+                  { "name": "Multithreading & concurrency (std::thread)", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Expert",
+                "skills": [
+                  { "name": "Template metaprogramming", "status": "pending" },
+                  { "name": "Custom memory allocators", "status": "pending" },
+                  { "name": "Performance optimization & profiling", "status": "pending" },
+                  { "name": "Boost libraries & ecosystem tools", "status": "pending" },
+                  { "name": "Advanced memory management & data structures", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Master",
+                "skills": [
+                  { "name": "ISO C++ standard development & contributions", "status": "pending" },
+                  { "name": "Compiler internals & extensions", "status": "pending" },
+                  { "name": "Large‑scale system architecture", "status": "pending" },
+                  { "name": "Assembly integration & low‑level optimizations", "status": "pending" }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "javascript",
+            "name": "JavaScript",
+            "level": "Beginner",
+            "xp": 1200,
+            "maxXp": 2200,
+            "description": "High‑level, interpreted language for web development, both client‑ and server‑side (Node.js), with dynamic typing and prototype‑based inheritance.",
+            "tiers": [
+              {
+                "title": "Beginner",
+                "skills": [
+                  { "name": "Basic syntax and variables", "status": "done" },
+                  { "name": "Data types (string, number, boolean)", "status": "done" },
+                  { "name": "Conditionals and loops", "status": "done" },
+                  { "name": "Functions and scope", "status": "done" },
+                  { "name": "Arrays and objects", "status": "done" }
+                ]
+              },
+              {
+                "title": "Developing",
+                "skills": [
+                  { "name": "DOM manipulation and event handling", "status": "done" },
+                  { "name": "Closures and lexical scope", "status": "learning" },
+                  { "name": "Prototype‑based inheritance", "status": "learning" },
+                  { "name": "Callback functions", "status": "done" },
+                  { "name": "JSON parsing and stringifying", "status": "done" }
+                ]
+              },
+              {
+                "title": "Advanced",
+                "skills": [
+                  { "name": "Promises and chaining", "status": "done" },
+                  { "name": "Async/await", "status": "learning" },
+                  { "name": "ES6+ modules (import/export)", "status": "learning" },
+                  { "name": "Fetch API / AJAX", "status": "learning" },
+                  { "name": "Error handling (try/catch)", "status": "learning" },
+                  { "name": "Event loop and concurrency model", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Expert",
+                "skills": [
+                  { "name": "Design patterns (Module, Observer, Factory)", "status": "pending" },
+                  { "name": "Performance optimization and memory profiling", "status": "pending" },
+                  { "name": "Unit and integration testing (Jest, Mocha)", "status": "pending" },
+                  { "name": "TypeScript basics", "status": "pending" },
+                  { "name": "Tooling (Webpack, Babel)", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Master",
+                "skills": [
+                  { "name": "JavaScript engine internals (V8, SpiderMonkey)", "status": "pending" },
+                  { "name": "Specification (ECMAScript) contributions", "status": "pending" },
+                  { "name": "Large‑scale application architecture", "status": "pending" },
+                  { "name": "Compiler and transpiler design", "status": "pending" }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "html",
+            "name": "HTML",
+            "level": "Developing",
+            "xp": 1200,
+            "maxXp": 2200,
+            "description": "Markup language for defining the structure and content of web pages, foundational to all web content.",
+            "tiers": [
+              {
+                "title": "Beginner",
+                "skills": [
+                  { "name": "Basic structure (DOCTYPE, html, head, body)", "status": "done" },
+                  { "name": "Headings (h1–h6) and paragraphs (p)", "status": "done" },
+                  { "name": "Links (a) and images (img)", "status": "done" },
+                  { "name": "Lists (ul, ol, li)", "status": "done" },
+                  { "name": "Basic formatting (strong, em, span)", "status": "done" }
+                ]
+              },
+              {
+                "title": "Developing",
+                "skills": [
+                  { "name": "Tables (table, tr, td)", "status": "done" },
+                  { "name": "Forms (form, input, button)", "status": "done" },
+                  { "name": "Semantic elements (section, article, nav)", "status": "done" },
+                  { "name": "Multimedia (audio, video)", "status": "done" },
+                  { "name": "IFrame usage", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Advanced",
+                "skills": [
+                  { "name": "Responsive meta viewport and image sizing", "status": "done" },
+                  { "name": "SVG and canvas drawing", "status": "learning" },
+                  { "name": "ARIA roles and accessibility features", "status": "pending" },
+                  { "name": "Microdata and schema.org markup", "status": "pending" },
+                  { "name": "Custom data attributes (data-*)", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Expert",
+                "skills": [
+                  { "name": "HTML5 APIs (geolocation, localStorage, sessionStorage)", "status": "pending" },
+                  { "name": "Web Workers and Service Workers", "status": "pending" },
+                  { "name": "Creating custom elements (Web Components)", "status": "pending" },
+                  { "name": "Canvas-based interactions and animations", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Master",
+                "skills": [
+                  { "name": "Contributions to the HTML specification", "status": "pending" },
+                  { "name": "Accessibility standards development and auditing", "status": "pending" },
+                  { "name": "Internationalization and multilingual support (lang attributes)", "status": "pending" },
+                  { "name": "Large-scale web architecture design", "status": "pending" }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "blender_animation",
+            "name": "Blender Animation",
+            "level": "Intermediate",
+            "xp": 1200,
+            "maxXp": 2200,
+            "description": "Blender's animation tools for character animation, simulations, and motion control.",
+            "tiers": [
+              {
+                "title": "Beginner",
+                "skills": [
+                  { "name": "UI navigation and basic object creation", "status": "done" },
+                  { "name": "Location, rotation, and scale keyframes", "status": "done" },
+                  { "name": "Using the Timeline and Dope Sheet editors", "status": "done" },
+                  { "name": "Basics of the Graph Editor", "status": "done" },
+                  { "name": "Basic interpolation (Linear, Bezier)", "status": "done" }
+                ]
+              },
+              {
+                "title": "Developing",
+                "skills": [
+                  { "name": "Rigging fundamentals (armature and bones)", "status": "done" },
+                  { "name": "Pose Mode and character animation keyframing", "status": "done" },
+                  { "name": "Path animations (Curves and Follow Path)", "status": "learning" },
+                  { "name": "Animation Constraints (Copy Location, Track To)", "status": "learning" },
+                  { "name": "Introduction to the Action Editor and NLA", "status": "learning" }
+                ]
+              },
+              {
+                "title": "Advanced",
+                "skills": [
+                  { "name": "NLA Editor and action blending", "status": "done" },
+                  { "name": "Shape keys and shape key drivers", "status": "learning" },
+                  { "name": "Advanced F-curve editing in the Graph Editor", "status": "learning" },
+                  { "name": "Physics simulation keyframing (cloth, fluid)", "status": "pending" },
+                  { "name": "Camera motion paths and dolly track animation", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Expert",
+                "skills": [
+                  { "name": "IK/FK rigging and switching setups", "status": "pending" },
+                  { "name": "Drivers and custom property animations", "status": "pending" },
+                  { "name": "Python scripting for animation automation", "status": "pending" },
+                  { "name": "Motion capture data import and retargeting", "status": "pending" },
+                  { "name": "Animation baking and performance optimization", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Master",
+                "skills": [
+                  { "name": "Contributions to Blender's animation engine", "status": "pending" },
+                  { "name": "Developing animation addons", "status": "pending" },
+                  { "name": "Designing and maintaining complex animation pipelines", "status": "pending" },
+                  { "name": "Integration with external pipelines (Unreal, Unity)", "status": "pending" },
+                  { "name": "Leading and coordinating animation teams", "status": "pending" }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "blender_modeling",
+            "name": "Blender Modeling",
+            "level": "Intermediate",
+            "xp": 1200,
+            "maxXp": 2200,
+            "description": "Mesh and surface modeling tools in Blender covering basic and advanced techniques.",
+            "tiers": [
+              {
+                "title": "Beginner",
+                "skills": [
+                  { "name": "UI navigation and 3D viewport control", "status": "done" },
+                  { "name": "Creating and editing primitives", "status": "done" },
+                  { "name": "Basic Edit Mode transforms (translate, rotate, scale)", "status": "done" },
+                  { "name": "Selection tools (vertex, edge, face)", "status": "done" },
+                  { "name": "Basic mesh operations (extrude, inset)", "status": "done" }
+                ]
+              },
+              {
+                "title": "Developing",
+                "skills": [
+                  { "name": "Modifiers (Mirror, Subdivision Surface)", "status": "learning" },
+                  { "name": "Loop cut and bevel tools", "status": "learning" },
+                  { "name": "Proportional Editing and snapping", "status": "learning" },
+                  { "name": "Origin and pivot handling", "status": "pending" },
+                  { "name": "Basic retopology tools", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Advanced",
+                "skills": [
+                  { "name": "UV unwrapping and seam marking", "status": "learning" },
+                  { "name": "Shape keys and vertex groups", "status": "learning" },
+                  { "name": "Basics of sculpt editing", "status": "pending" },
+                  { "name": "Hard-surface modeling (boolean techniques)", "status": "pending" },
+                  { "name": "Organic modeling and topology", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Expert",
+                "skills": [
+                  { "name": "Geometry Nodes fundamentals", "status": "pending" },
+                  { "name": "Advanced retopology and decimate tools", "status": "pending" },
+                  { "name": "Procedural modeling with Geometry Nodes", "status": "pending" },
+                  { "name": "Custom normals and edge flow optimization", "status": "pending" },
+                  { "name": "Using addons to enhance modeling", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Master",
+                "skills": [
+                  { "name": "Complex Geometry Nodes networks", "status": "pending" },
+                  { "name": "Developing a custom modeling addon in Python", "status": "pending" },
+                  { "name": "Creating complex procedural environments", "status": "pending" },
+                  { "name": "Pipeline integration (Unreal, Unity)", "status": "pending" },
+                  { "name": "Leading a team’s modeling workflow", "status": "pending" }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "unreal",
+            "name": "Unreal Engine 5",
+            "level": "Intermediate",
+            "xp": 1200,
+            "maxXp": 2200,
+            "description": "Comprehensive real‑time 3D engine for games, simulations and interactive experiences, supporting both Blueprint scripting and C++ development.",
+            "tiers": [
+              {
+                "title": "Beginner",
+                "skills": [
+                  { "name": "Editor UI navigation and viewport control", "status": "done" },
+                  { "name": "Creating and managing basic projects", "status": "done" },
+                  { "name": "Placing actors and simple scene assembly", "status": "done" },
+                  { "name": "Basic material creation", "status": "done" },
+                  { "name": "Using built‑in geometry tools (Brushes, BSP)", "status": "done" }
+                ]
+              },
+              {
+                "title": "Developing",
+                "skills": [
+                  { "name": "Blueprint visual scripting basics", "status": "done" },
+                  { "name": "C++ class integration and workflow", "status": "learning" },
+                  { "name": "Level design fundamentals", "status": "learning" },
+                  { "name": "Lighting setup and light baking", "status": "learning" },
+                  { "name": "Simple physics and collision setup", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Advanced",
+                "skills": [
+                  { "name": "Advanced Blueprint patterns and macros", "status": "learning" },
+                  { "name": "Custom shaders with the Material Editor", "status": "learning" },
+                  { "name": "Animation Blueprints and state machines", "status": "learning" },
+                  { "name": "AI behavior trees and navigation meshes", "status": "pending" },
+                  { "name": "Basic networking and multiplayer replication", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Expert",
+                "skills": [
+                  { "name": "Performance profiling and optimization", "status": "pending" },
+                  { "name": "Custom C++ plugins and modules", "status": "pending" },
+                  { "name": "Advanced networking and dedicated servers", "status": "pending" },
+                  { "name": "VR/AR implementation and optimization", "status": "pending" },
+                  { "name": "Pipeline automation with Python and Editor scripting", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Master",
+                "skills": [
+                  { "name": "Engine source modification and contributions", "status": "pending" },
+                  { "name": "Custom rendering features and plugins", "status": "pending" },
+                  { "name": "Large‑scale project architecture and workflows", "status": "pending" },
+                  { "name": "Advanced procedural generation (Niagara, Blueprint)", "status": "pending" },
+                  { "name": "Leading cross‑disciplinary development teams", "status": "pending" }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "github",
+            "name": "GitHub",
+            "level": "Intermediate",
+            "xp": 1200,
+            "maxXp": 2200,
+            "description": "Platform for version control, collaboration, and continuous integration on Git repositories.",
+            "tiers": [
+              {
+                "title": "Beginner",
+                "skills": [
+                  { "name": "Cloning and forking repositories", "status": "done" },
+                  { "name": "Basic commits and push/pull", "status": "done" },
+                  { "name": "Navigating the GitHub UI", "status": "done" },
+                  { "name": "Creating and editing README files", "status": "done" }
+                ]
+              },
+              {
+                "title": "Developing",
+                "skills": [
+                  { "name": "Creating and managing branches", "status": "learning" },
+                  { "name": "Merge and rebase workflows", "status": "learning" },
+                  { "name": "Opening and reviewing pull requests", "status": "learning" },
+                  { "name": "Issue tracking and project boards", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Advanced",
+                "skills": [
+                  { "name": "GitHub Actions workflows", "status": "learning" },
+                  { "name": "Setting up CI/CD pipelines", "status": "learning" },
+                  { "name": "Code review best practices and tools", "status": "pending" },
+                  { "name": "Publishing GitHub Pages sites", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Expert",
+                "skills": [
+                  { "name": "Security and dependency scanning (Dependabot, code scanning)", "status": "pending" },
+                  { "name": "Managing multi-repository organizations", "status": "pending" },
+                  { "name": "GitHub Apps and custom OAuth applications", "status": "pending" },
+                  { "name": "Complex automations with GitHub Actions", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Master",
+                "skills": [
+                  { "name": "Contributing to open source on GitHub", "status": "pending" },
+                  { "name": "Developing custom GitHub Actions and tools", "status": "pending" },
+                  { "name": "Organization and team-level policies", "status": "pending" },
+                  { "name": "Designing comprehensive DevOps pipelines", "status": "pending" }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "git",
+            "name": "Git",
+            "level": "Intermediate",
+            "xp": 1200,
+            "maxXp": 2200,
+            "description": "Distributed version control system for tracking changes in source code during software development.",
+            "tiers": [
+              {
+                "title": "Beginner",
+                "skills": [
+                  { "name": "Initializing repositories (git init)", "status": "done" },
+                  { "name": "Cloning repositories (git clone)", "status": "done" },
+                  { "name": "Staging and committing changes (git add, git commit)", "status": "done" },
+                  { "name": "Checking status and diffs (git status, git diff)", "status": "done" }
+                ]
+              },
+              {
+                "title": "Developing",
+                "skills": [
+                  { "name": "Branching and switching branches (git branch, git checkout)", "status": "learning" },
+                  { "name": "Merging branches (git merge)", "status": "learning" },
+                  { "name": "Stashing changes (git stash)", "status": "learning" },
+                  { "name": "Viewing history (git log, git reflog)", "status": "learning" }
+                ]
+              },
+              {
+                "title": "Advanced",
+                "skills": [
+                  { "name": "Rebasing and interactive rebase (git rebase)", "status": "pending" },
+                  { "name": "Cherry-picking commits (git cherry-pick)", "status": "pending" },
+                  { "name": "Bisecting to find bugs (git bisect)", "status": "pending" },
+                  { "name": "Using submodules and subtrees", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Expert",
+                "skills": [
+                  { "name": "Hooks and automation (pre-commit, post-receive)", "status": "pending" },
+                  { "name": "Worktrees and partial clones", "status": "pending" },
+                  { "name": "History rewriting (filter-branch, git filter-repo)", "status": "pending" },
+                  { "name": "Performance tuning large repositories", "status": "pending" }
+                ]
+              },
+              {
+                "title": "Master",
+                "skills": [
+                  { "name": "Contributing to the Git codebase", "status": "pending" },
+                  { "name": "Using plumbing commands (git cat-file, git update-index)", "status": "pending" },
+                  { "name": "Designing complex branching workflows (Git Flow, trunk-based)", "status": "pending" },
+                  { "name": "Building custom Git extensions and scripts", "status": "pending" }
+                ]
+              }
+            ]
+        }          
+    ]
+}

@@ -1,0 +1,658 @@
+/* ------------------------------------------------------ */
+/* GENERAL: COLORS, FONTS, BASE STYLES */
+/* ------------------------------------------------------ */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-font: 'Rubik', sans-serif;
+    /* Vaalean teeman värit */
+    --pearl-white: #F8F8F5;
+    /* hyvin vaalea, lähes valkoinen */
+    --light-bg: #f9f7f4;
+    /* vaalean teeman taustaväri */
+    --light-text: #252222;
+    /* tumma teksti vaalealla pohjalla */
+    --light-bg-gradient: linear-gradient(to bottom, #f9f7f4, #eae1d6);
+    --header-light-bg: #cabdae;
+    /* vaalean navbarin tausta */
+    --footer-bg: #cabdae;
+    /* footerin vaalea tausta */
+
+    /* Tumman teeman värit */
+    --dark-bg: #121212;
+    /* tumma perustausta */
+    --dark-surface: #1E1E1E;
+    /* esim. kortit, mobiilivalikko */
+    --dark-text: #CCCCCC;
+    /* pääteksti tummassa teemassa */
+    --dark-heading: #F5F5F5;
+    /* otsikot tummassa teemassa */
+    --dark-border: #333333;
+    /* tumman teeman borderi */
+    --dark-bg-gradient: linear-gradient(to bottom, #121212, #1a1a1a);
+
+    /* Korostus- ja tehostevärit */
+    --accent: #978d7d;
+    /* korosteväri esim. painikkeet/linkit */
+    --accent-hover: #ece0ce;
+    /* hover-väri linkeille */
+    --underline-light: #ffffff;
+    /* alaviiva esim. vaaleassa navbarissa */
+}
+
+html,
+body {
+    font-family: var(--main-font);
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth;
+
+    /* Tumman teeman oletustausta */
+    background: var(--dark-bg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Bodoni Moda', serif;
+}
+
+body {
+    position: relative;
+    background: transparent;
+    /* ::before-elementti näyttää taustakuvan */
+    color: var(--dark-text);
+    line-height: 1.6;
+    transition: background 0.4s, color 0.4s;
+    flex: 1;
+    z-index: 0;
+}
+
+body.light-theme {
+    background: var(--light-bg);
+    color: var(--light-text);
+}
+
+html.light-theme {
+    background: var(--light-bg-gradient);
+}
+
+/* Taustakuva ja gradientti tummalle teemalle */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: var(--dark-bg-gradient);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background 0.4s ease;
+}
+
+/* Taustakuva ja gradientti vaalealle teemalle */
+body.light-theme::before {
+    background: var(--light-bg-gradient);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Otsikot perivät väriteeman ja ovat keskitettyjä */
+h1,
+h2,
+h3 {
+    text-align: center;
+    color: inherit;
+    font-weight: 600;
+}
+
+/* Kaikki peruselementit käyttävät teematekstiä */
+p,
+a,
+li,
+span,
+label {
+    color: inherit;
+}
+
+/* Linkkien hover-efekti */
+a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+
+/* body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: url('../Photos/Minimalist2.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: background 0.4s ease;
+}
+
+body.light-theme::before {
+    background: url('../Photos/minbeige.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+} */
+
+/* ------------------------------------------------------ */
+/* HEADER & NAVIGATION */
+/* ------------------------------------------------------ */
+
+header.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    border-bottom: 3px solid var(--underline-light);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    color: var(--dark-text);
+    background: transparent;
+}
+
+body.light-theme header.navbar {
+    background-color: var(--header-light-bg);
+    border-bottom: 3px solid var(--underline-light);
+    color: var(--light-text);
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-weight: 500;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.language-toggle {
+    display: flex;
+    gap: 1rem;
+}
+
+.language-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.language-btn:hover {
+    transform: scale(1.1);
+    background-color: #f0f0f0;
+}
+
+.flag-icon {
+    width: 30px;
+    height: 20px;
+    object-fit: cover;
+}
+
+
+
+/*yläpalkki*/
+
+/* Outer navbar for full-width background */
+header.navbar-outer {
+    width: 100%;
+    max-width: 100%;
+    background-color: #121212;
+    border-bottom: 3px solid var(--underline-light);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+body.light-theme header.navbar-outer {
+    background-color: var(--header-light-bg);
+    border-bottom: 3px solid var(--underline-light);
+}
+
+/* Inner container (actual nav content) */
+.navbar {
+    width: 100%;
+    margin: 0;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: inherit;
+    box-sizing: border-box;
+}
+
+
+/* ------------------------------------------------------ */
+/* MOBILE MENU */
+/* ------------------------------------------------------ */
+
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: inherit;
+}
+
+.hamburger img {
+    width: 30px;
+    height: 30px;
+}
+
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    background-color: var(--dark-bg);
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    padding: 0 1rem;
+    z-index: 999;
+    border-top: 2px solid var(--header-dark-bg);
+    transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+body.light-theme .mobile-menu {
+    background-color: #ffffff;
+    border-top: 2px solid var(--header-light-bg);
+    border-bottom: 2px solid var(--header-light-bg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu.show {
+    max-height: 80vh;
+    padding: 1rem;
+    transition: all 0.4s ease;
+}
+
+.mobile-menu a {
+    padding: 0.8rem;
+    text-decoration: none;
+    font-weight: 600;
+    color: inherit;
+}
+
+.mobile-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.mobile-menu .contact-btn {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 0.75rem auto;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    background-color: var(--accent);
+    color: white;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+/* ------------------------------------------------------ */
+/* THEME TOGGLE */
+/* ------------------------------------------------------ */
+
+/* Piilota checkbox-molemmissa */
+#toggle,
+#toggle-mobile {
+    display: none;
+}
+
+/* Molemmat toggle-labelit saavat saman muodon */
+.toggle-label {
+    width: 70px;
+    height: 36px;
+    background-color: #dcd6d0;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+body:not(.light-theme) .toggle-label {
+    background-color: #3a3a3a;
+    /* sama sävy kuin header dark */
+}
+
+/* Sisäinen liukuva ympyrä */
+.toggle-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background-color: white;
+    transition: transform 0.6s ease;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Aurinko & kuu kuvakkeet */
+.toggle-icon .kuva {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    transition: opacity 0.6s ease;
+    object-fit: contain;
+}
+
+.sun {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.moon {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+/* Kun valittu (checkbox checked), liu'uta oikealle ja vaihda ikonit */
+#toggle:checked+.toggle-label .toggle-icon,
+#toggle-mobile:checked+.toggle-label .toggle-icon {
+    transform: translateX(34px);
+}
+
+#toggle:checked+.toggle-label .sun,
+#toggle-mobile:checked+.toggle-label .sun {
+    opacity: 0;
+}
+
+#toggle:checked+.toggle-label .moon,
+#toggle-mobile:checked+.toggle-label .moon {
+    opacity: 1;
+}
+
+/* ------------------------------------------------------ */
+/* RESPONSIVE */
+/* ------------------------------------------------------ */
+
+@media (max-width: 1000px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links,
+    .navbar>.header-controls,
+    .navbar>.contact-btn {
+        display: none;
+    }
+}
+
+@media (min-width: 1001px) {
+    .mobile-settings {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .language-toggle,
+    .teema-toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    #toggle-mobile,
+    #toggle-mobile+.toggle-label {
+        display: none;
+    }
+
+    @media (max-width: 1000px) {
+        .navbar {
+            padding: 1rem;
+            /* pienempi padding mobiilissa */
+            max-width: 100%;
+            /* EI rajoitusta */
+            margin: 0;
+            /* EI keskitystä */
+        }
+
+
+    }
+}
+
+/* ------------------------------------------------------ */
+/* FOOTER */
+/* ------------------------------------------------------ */
+
+.site-footer {
+    background-color: var(--footer-bg);
+    color: var(--light-text);
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    margin-top: auto;
+    border-top: 2px solid #ccc1b7;
+}
+
+body:not(.light-theme) .site-footer {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+    border-top: 2px solid #444;
+}
+
+/* Wrapper for main content to allow footer push */
+.content-wrapper {
+    flex: 1;
+    min-height: calc(100vh - 100px);
+    padding-bottom: 2rem;
+}
+
+#toggle,
+#toggle-mobile {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+/* ------------------------------------------------------ */
+/* NEXT NUOLI */
+/* ------------------------------------------------------ */
+
+
+.scroll-next {
+    position: relative;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.arrow-icon {
+    width: 40px;
+    height: 40px;
+    animation: float 2s ease-in-out infinite;
+    transition: transform 0.3s ease;
+    filter: var(--arrow-filter);
+}
+
+.arrow-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Teemanmukainen väritys */
+:root {
+    --arrow-filter: invert(0);
+    /* tummaan teemaan sopiva nuoli */
+}
+
+body.light-theme {
+    --arrow-filter: invert(1);
+    /* vaaleaan teemaan sopiva */
+}
+
+.scroll-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 3rem 0;
+}
+
+.scroll-navigation .scroll-btn img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.scroll-navigation .scroll-btn:hover img {
+    transform: scale(1.2);
+}
+
+
+/* Animaatio */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+}
+
+
+/* ------------------------------------------------------ */
+/* links */
+/* ------------------------------------------------------ */
+
+.nav-links a {
+    font-weight: 800;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Oletus (vaalea teema tai yleinen) */
+.nav-links a:hover {
+    color: var(--accent);
+    transform: translateY(-2px);
+}
+
+/* Tumma teema */
+body:not(.light-theme) .nav-links a:hover {
+    color: #ffffff;
+    /* vaalea harmaa hover-väri tummassa tilassa */
+}
+
+body:not(.light-theme) .nav-links a::after {
+    background-color: #ffffff;
+    /* vaaleampi viiva tummalle taustalle */
+}
+
+.contact-btn {
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-left: 2rem;
+    background-color: var(--accent);
+}
+
+.contact-btn:hover {
+    background-color: #b0a79e;
+    transform: scale(1.05);
+}
+
+/* Tumma tila: parempi sävy kontrastiksi */
+body:not(.light-theme) .contact-btn {
+    background-color: #002385;
+    color: var(--pearl-white);
+}
+
+body:not(.light-theme) .contact-btn:hover {
+    background-color: #555;
+}

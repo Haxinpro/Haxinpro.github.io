@@ -1,0 +1,60 @@
+/* ------------------------------------------------------ */
+/* INTRODUCTION (ESITTELY-OSIO) */
+/* ------------------------------------------------------ */
+
+.esittely {
+    margin: 190px auto 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding: 4rem 2rem;
+    scroll-margin-top: 80px;
+    text-align: center;
+    max-width: 1200px;
+}
+
+/* Tummenna ikoni vaaleassa teemassa */
+body.light-theme .cv-link img {
+    filter: brightness(0.2); /* tummentaa kuvan */
+  }
+  
+
+.profiilikuva img {
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.esittelyteksti {
+    max-width: 600px;
+}
+
+.esittelyteksti h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.esittelyteksti p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Responsiivisuus */
+@media (max-width: 1000px) {
+    .esittely {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profiilikuva img {
+        width: 200px;
+    }
+
+    .esittelyteksti h2 {
+        font-size: 2rem;
+    }
+}

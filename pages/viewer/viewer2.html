@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>3D Viewer Demo – Monimallin valitsin</title>
+  <!-- Model Viewer web component -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body {
+      margin: 0; padding: 1rem;
+      background: #222; color: #fff;
+      font-family: sans-serif;
+      display: flex; flex-direction: column; align-items: center;
+    }
+    .viewer-wrapper {
+      display: flex; gap: 1rem;
+      width: 100%; max-width: 1200px;
+    }
+    model-viewer {
+      flex: 2;
+      width: 100%; height: 70vh; min-height: 400px;
+      background: #000; border: 2px solid #555;
+      border-radius: 8px;
+    }
+    .controls {
+      flex: 1;
+      display: flex; flex-direction: column; gap: 1rem;
+    }
+    label {
+      font-weight: bold;
+    }
+    select {
+      padding: .5rem; border-radius: 4px;
+      border: 1px solid #555; background: #333; color: #fff;
+    }
+    .instructions {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid #555; border-radius: 8px;
+      padding: 1rem; font-size: .9rem; line-height: 1.4;
+    }
+    .instructions h2 {
+      margin-top: 0; margin-bottom: .5rem;
+      font-size: 1.1rem;
+      border-bottom: 2px solid #1e90ff;
+      padding-bottom: .3rem;
+    }
+    .instr-item {
+      margin-bottom: .75rem;
+    }
+    .instr-item p {
+      margin: .3rem 0;
+    }
+    .back-btn {
+      margin-top: 1rem; padding: .5rem 1rem;
+      background: #444; color: #fff; text-decoration: none;
+      border-radius: 4px; align-self: flex-start;
+      transition: background .3s;
+    }
+    .back-btn:hover { background: #666; }
+
+    @media (max-width: 1000px) {
+      .viewer-wrapper {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      model-viewer {
+        height: 50vh;
+        min-height: 300px;
+      }
+      .back-btn {
+        align-self: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="viewer-wrapper">
+
+    <!-- Vasemmalla: 3D-katseluikkuna -->
+    <model-viewer id="mv"
+      src="Ship.glb"
+      alt="3D‑malli"
+      camera-controls
+      auto-rotate
+      background-color="#000">
+    </model-viewer>
+
+    <!-- Oikealla: mallivalitsin + ohjeet -->
+    <div class="controls">
+      <!-- Mallivalitsin -->
+      <label for="model-select">Valitse malli / Choose model:</label>
+      <select id="model-select">
+        <option value="Ship.glb">Laiva / Ship</option>
+        <option value="Cannon.glb">Tykki / Cannon</option>
+        <option value="Hinge.glb">Sarana / Hinge</option>
+        <!-- Lisää tarvittaessa muita .glb‑tiedostoja -->
+      </select>
+
+      <!-- Navigointi‑ohjeet -->
+      <aside class="instructions">
+        <h2>Navigointi / Controls</h2>
+        <div class="instr-item">
+          <p><strong>Kiertäminen:</strong> Klikkaa ja vedä mallia</p>
+          <p><strong>Rotate:</strong> Click and drag the model</p>
+        </div>
+        <div class="instr-item">
+          <p><strong>Zoom:</strong> Rullaa hiiren pyörää ylös/alas</p>
+          <p><strong>Zoom:</strong> Scroll the mouse wheel up/down</p>
+        </div>
+        <div class="instr-item">
+          <p><strong>Siirtäminen:</strong> Pidä Shift ja vedä</p>
+          <p><strong>Pan:</strong> Hold Shift and drag</p>
+        </div>
+      </aside>
+
+      <!-- Takaisin-projektiin -->
+      <a href="../projects.html" class="back-btn">
+        ← Takaisin projekteihin / Back to projects
+      </a>
+    </div>
+
+  </div>
+
+  <script>
+    const mv = document.getElementById('mv');
+    document.getElementById('model-select').addEventListener('change', e => {
+      mv.src = e.target.value;
+    });
+  </script>
+
+</body>
+</html>

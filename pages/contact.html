@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="otsikko_yhteystiedot">Yhteystiedot</title>
+
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+
+
+
+    <script>
+        const isAuthed = localStorage.getItem("authenticated");
+        const savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme === "light") {
+            document.documentElement.classList.add("light-theme");
+            document.body?.classList.add("light-theme");
+        }
+
+        if (isAuthed !== "true") {
+            window.location.href = "../index.html";
+        } else {
+            document.body.classList.remove("hidden-until-auth");
+        }
+    </script>
+</head>
+
+<body>
+    <header class="navbar-outer">
+        <div class="navbar">
+            <div class="logo" data-i18n="logo">Teemu Karne</div>
+
+            <nav class="nav-links" role="navigation" aria-label="Päävalikko">
+                <a href="welcome.html" data-i18n="tervetuloa">Tervetuloa</a>
+                <a href="aboutme.html" data-i18n="minusta">Minusta</a>
+                <a href="skills.html" data-i18n="osaamiset">Osaamiset</a>
+                <a href="projects.html" data-i18n="projektit">Projektit</a>
+                <a href="contact.html" data-i18n="yhteystiedot">Yhteystiedot</a>
+            </nav>
+
+            <div class="header-controls">
+                <div class="language-toggle">
+                    <button class="language-btn" onclick="switchLanguage('fi')" data-i18n="suomi">
+                        <img src="../photos/icons/fi_flag.svg" alt="Suomi" class="flag-icon" />
+                    </button>
+                    <button class="language-btn" onclick="switchLanguage('en')" data-i18n="english">
+                        <img src="../photos/icons/gb_flag.svg" alt="English" class="flag-icon" />
+                    </button>
+                </div>
+
+                <div class="teema-toggle">
+                    <input type="checkbox" id="toggle" />
+                    <label for="toggle" class="toggle-label">
+                        <div class="toggle-icon">
+                            <img src="../photos/icons/sun.svg" class="kuva sun" alt="Sun" />
+                            <img src="../photos/icons/moon.svg" class="kuva moon" alt="Moon" />
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <a href="contact.html" class="btn contact-btn" data-i18n="ota_yhteytta">Ota yhteyttä</a>
+
+            <div class="hamburger" onclick="toggleMenu()">
+                <img id="menu-icon" src="../photos/icons/menu.svg" alt="Menu" />
+                <img id="close-icon" src="../photos/icons/close.svg" alt="Sulje" style="display: none;" />
+            </div>
+
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="welcome.html" data-i18n="tervetuloa">Tervetuloa</a>
+                <a href="aboutme.html" data-i18n="minusta">Minusta</a>
+                <a href="skills.html" data-i18n="osaamiset">Osaamiset</a>
+                <a href="projects.html" data-i18n="projektit">Projektit</a>
+                <a href="contact.html" class="btn contact-btn" data-i18n="ota_yhteytta">Ota yhteyttä</a>
+
+                <div class="mobile-settings">
+                    <div class="language-toggle">
+                        <button class="language-btn" onclick="switchLanguage('fi')">
+                            <img src="../photos/icons/fi_flag.svg" alt="Suomi" class="flag-icon" />
+                        </button>
+                        <button class="language-btn" onclick="switchLanguage('en')">
+                            <img src="../photos/icons/gb_flag.svg" alt="English" class="flag-icon" />
+                        </button>
+                    </div>
+                    <div class="teema-toggle">
+                        <input type="checkbox" id="toggle-mobile" />
+                        <label for="toggle-mobile" class="toggle-label">
+                            <div class="toggle-icon">
+                                <img src="../photos/icons/sun.svg" class="kuva sun" alt="Sun" />
+                                <img src="../photos/icons/moon.svg" class="kuva moon" alt="Moon" />
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="yhteystiedot" class="section section-yhteystiedot">
+        <div class="contact-container">
+            <div class="contact-info fade-in-left">
+                <h2 data-i18n="contact_title">Ota yhteyttä</h2>
+                <h3 class="highlight" data-i18n="contact_subheading">Keskustellaan ja katsotaan mitä siitä tulee</h3>
+                <p data-i18n="contact_description">
+                    Autan sinua mielelläni seuraavassa projektissasi. Voit ottaa yhteyttä alla olevalla lomakkeella tai
+                    sosiaalisen median kautta.
+                </p>
+                <div class="social-icons small">
+                    <a href="https://github.com/Haxinpro" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="www.linkedin.com/in/teemu-karne-646802297" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="divider-line"></div>
+
+            <form class="contact-form fade-in-right">
+                <input type="text" name="name" placeholder="Nimesi" required data-i18n-placeholder="lomake_nimi" />
+                <input type="email" name="email" placeholder="Sähköpostisi" required
+                    data-i18n-placeholder="lomake_sahkoposti" />
+                <textarea name="message" rows="5" placeholder="Viestisi" required
+                    data-i18n-placeholder="lomake_viesti"></textarea>
+                <button type="submit" data-i18n="lomake_laheta">Lähetä</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="scroll-navigation">
+        <a href="projects.html" class="scroll-btn">
+            <img src="../photos/icons/arrow_back.svg" alt="Edellinen osio" class="arrow-icon">
+        </a>
+    </div>
+
+    <footer class="site-footer">
+    </footer>
+
+    <script src="../js/kielidata.js"></script>
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>

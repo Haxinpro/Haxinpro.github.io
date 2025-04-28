@@ -1,0 +1,310 @@
+/* ------------------------------------------------------ */
+/* YHTEYSTIEDOT (CONTACT SECTION) */
+/* ------------------------------------------------------ */
+
+#yhteystiedot {
+  padding: 6rem 2rem 4rem; /* enemmän paddingia ylös */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* ei enää keskitetä pystyssä */
+  align-items: center;
+  text-align: center;
+}
+
+.section-yhteystiedot {
+  min-height: auto;
+  padding: 4rem 1rem;
+}
+
+/* ------------------------------------------------------ */
+/* FIND ME -SOSIAALINEN OSIO */
+/* ------------------------------------------------------ */
+
+#findme {
+  padding: 4rem 1rem;
+  text-align: center;
+  scroll-margin-top: 80px;
+}
+
+#findme p {
+  margin-bottom: 1rem;
+  color: inherit;
+}
+
+.section-findme {
+  min-height: auto;
+  padding: 4rem 1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  font-size: 2rem;
+  color: #333;
+  transition: color 0.3s ease, transform 0.2s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+.social-icons a:nth-child(1) { animation-delay: 0.1s; }
+.social-icons a:nth-child(2) { animation-delay: 0.3s; }
+.social-icons a:nth-child(3) { animation-delay: 0.5s; }
+
+body.dark-theme .social-icons a {
+  color: #ccc;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+  transform: scale(1.2);
+}
+
+body.dark-theme .social-icons a:hover {
+  color: #3399ff;
+}
+
+/* ------------------------------------------------------ */
+/* CONTACT FORM */
+/* ------------------------------------------------------ */
+
+.contact-form {
+  max-width: 600px;
+  width: 100%;
+  margin: 2rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  resize: vertical;
+  background-color: white;
+  color: black;
+}
+
+.contact-form button {
+  padding: 10px;
+  background-color: #3a4f7c;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* ------------------------------------------------------ */
+/* TEEMA: LIGHT & DARK OVERRIDES */
+/* ------------------------------------------------------ */
+
+body.light-theme .contact-form button {
+  background-color: #c4aa92;
+  color: white;
+}
+
+body.dark-theme .contact-form button:hover {
+  background-color: #1e70cc;
+}
+
+body.dark-theme .contact-form input,
+body.dark-theme .contact-form textarea {
+  background-color: #2a2a2a;
+  color: white;
+  border: 1px solid #555;
+}
+
+body.dark-theme .contact-info p,
+body.dark-theme .contact-info h2,
+body.dark-theme .highlight {
+  color: #f1f1f1;
+}
+
+body.dark-theme .cta-btn {
+  background-color: #ff5c5c;
+}
+
+body.dark-theme .cta-btn:hover {
+  background-color: #ff3333;
+}
+
+body.dark-theme .social-icons.small a {
+  background: #1f1f1f;
+  color: #eee;
+}
+
+body.dark-theme .social-icons.small a:hover {
+  background-color: #ff4a4a;
+}
+
+body.light-theme .highlight {
+  color: #444;
+}
+
+body.dark-theme .highlight {
+  color: var(--pearl-white) !important;
+}
+
+/* ------------------------------------------------------ */
+/* CONTACT INFO + ACTION LINK */
+/* ------------------------------------------------------ */
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  flex-wrap: nowrap;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact-info h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-info p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.highlight {
+  font-weight: 600;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background-color: #f44336;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* ------------------------------------------------------ */
+/* PIENEMMÄT SOSIAALINEN IKONIT */
+/* ------------------------------------------------------ */
+
+.social-icons.small {
+  margin-top: 1.5rem;
+}
+
+.social-icons.small a {
+  font-size: 1.2rem;
+  background: #333;
+  color: white;
+  padding: 0.6rem;
+  margin-right: 0.5rem;
+  border-radius: 4px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.social-icons.small a:hover {
+  background-color: #f44336;
+}
+
+/* ------------------------------------------------------ */
+/* KORISTEVIIVA */
+/* ------------------------------------------------------ */
+
+.divider-line {
+  width: 3px;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2), transparent);
+  border-radius: 4px;
+  min-height: 300px;
+  align-self: stretch;
+  margin: 0 1rem;
+}
+
+body.dark-theme .divider-line {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ------------------------------------------------------ */
+/* ANIMAATIOT */
+/* ------------------------------------------------------ */
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: fadeLeft 0.8s forwards ease;
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  animation: fadeRight 0.8s forwards ease;
+}
+
+@keyframes fadeLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ------------------------------------------------------ */
+/* RESPONSIIVISUUS */
+/* ------------------------------------------------------ */
+
+@media (max-width: 1000px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .divider-line {
+    display: none;
+  }
+  #yhteystiedot {
+    padding-top: 3rem;
+  }
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="otsikko_osaamiset">Osaamiset</title>
+
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/skills.css">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        const isAuthed = localStorage.getItem("authenticated");
+        const savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme === "light") {
+            document.documentElement.classList.add("light-theme");
+            document.body?.classList.add("light-theme");
+        }
+
+        if (isAuthed !== "true") {
+            window.location.href = "../index.html";
+        } else {
+            document.body.classList.remove("hidden-until-auth");
+        }
+    </script>
+</head>
+
+<body class="dark-theme">
+    <header class="navbar-outer">
+        <div class="navbar">
+            <div class="logo" data-i18n="logo">Teemu Karne</div>
+
+            <nav class="nav-links" role="navigation" aria-label="Päävalikko">
+                <a href="welcome.html" data-i18n="tervetuloa">Tervetuloa</a>
+                <a href="aboutme.html" data-i18n="minusta">Minusta</a>
+                <a href="skills.html" data-i18n="osaamiset">Osaamiset</a>
+                <a href="projects.html" data-i18n="projektit">Projektit</a>
+                <a href="contact.html" data-i18n="yhteystiedot">Yhteystiedot</a>
+            </nav>
+
+            <div class="header-controls">
+                <div class="language-toggle">
+                    <button class="language-btn" onclick="switchLanguage('fi')" data-i18n="suomi">
+                        <img src="../photos/icons/fi_flag.svg" alt="Suomi" class="flag-icon" />
+                    </button>
+                    <button class="language-btn" onclick="switchLanguage('en')" data-i18n="english">
+                        <img src="../photos/icons/gb_flag.svg" alt="English" class="flag-icon" />
+                    </button>
+                </div>
+
+                <div class="teema-toggle">
+                    <input type="checkbox" id="toggle" />
+                    <label for="toggle" class="toggle-label">
+                        <div class="toggle-icon">
+                            <img src="../photos/icons/sun.svg" class="kuva sun" alt="Sun" />
+                            <img src="../photos/icons/moon.svg" class="kuva moon" alt="Moon" />
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <a href="contact.html" class="btn contact-btn" data-i18n="ota_yhteytta">Ota yhteyttä</a>
+
+            <div class="hamburger" onclick="toggleMenu()">
+                <img id="menu-icon" src="../photos/icons/menu.svg" alt="Menu" />
+                <img id="close-icon" src="../photos/icons/close.svg" alt="Sulje" style="display: none;" />
+            </div>
+
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="welcome.html" data-i18n="tervetuloa">Tervetuloa</a>
+                <a href="aboutme.html" data-i18n="minusta">Minusta</a>
+                <a href="skills.html" data-i18n="osaamiset">Osaamiset</a>
+                <a href="projects.html" data-i18n="projektit">Projektit</a>
+                <a href="contact.html" class="btn contact-btn" data-i18n="ota_yhteytta">Ota yhteyttä</a>
+
+                <div class="mobile-settings">
+                    <div class="language-toggle">
+                        <button class="language-btn" onclick="switchLanguage('fi')">
+                            <img src="../photos/icons/fi_flag.svg" alt="Suomi" class="flag-icon" />
+                        </button>
+                        <button class="language-btn" onclick="switchLanguage('en')">
+                            <img src="../photos/icons/gb_flag.svg" alt="English" class="flag-icon" />
+                        </button>
+                    </div>
+                    <div class="teema-toggle">
+                        <input type="checkbox" id="toggle-mobile" />
+                        <label for="toggle-mobile" class="toggle-label">
+                            <div class="toggle-icon">
+                                <img src="../photos/icons/sun.svg" class="kuva sun" alt="Sun" />
+                                <img src="../photos/icons/moon.svg" class="kuva moon" alt="Moon" />
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="osaamiset">
+        <h2 data-i18n="osaamiset_otsikko">Osaamisalueet</h2>
+
+        <p class="info-ohje" data-i18n="info_ohje">Klikkaa osaamisalueen kuvaketta nähdäksesi tarkemmat tiedot</p>
+        <div class="legend">
+            <p><span class="dot done">✔</span> <span data-i18n="legend_done">Osaan hyvin</span></p>
+            <p><span class="dot learning">●</span> <span data-i18n="legend_learning">Työn alla</span></p>
+            <p><span class="dot pending">○</span> <span data-i18n="legend_pending">Paljon opittavaa</span></p>
+        </div>
+
+        <!-- Kielet -->
+        <h3 data-i18n="otsikko_kielet">Ohjelmointikielet</h3>
+        <div class="osaamislista">
+            <div class="osaaminen" data-type="language" onclick="showDetails(this, 'csharp')">
+                <img src="../photos/csharp_logo.png" alt="C# logo">
+                <span class="nimi">C#</span>
+            </div>
+            <div class="osaaminen" onclick="showDetails(this, 'python')">
+                <img src="../photos/python_logo.png" alt="Python logo">
+                <span class="nimi">Python</span>
+            </div>
+            <div class="osaaminen" onclick="showDetails(this, 'cpp')">
+                <img src="../photos/cplusplus.png" alt="C++ logo">
+                <span class="nimi">C++</span>
+            </div>
+            <div class="osaaminen" onclick="showDetails(this, 'javascript')">
+                <img src="../photos/js_logo.png" alt="JS logo">
+                <span class="nimi">Javascript</span>
+            </div>
+            <div class="osaaminen" onclick="showDetails(this, 'html')">
+                <img src="../photos/html_logo.png" alt="HTML logo">
+                <span class="nimi">HTML</span>
+            </div>
+            <div class="osaaminen" onclick="showDetails(this, 'css')">
+                <img src="../photos/css_logo.png" alt="CSS logo">
+                <span class="nimi">CSS</span>
+            </div>
+        </div>
+
+        <!-- Ohjelmistot -->
+        <h3 data-i18n="otsikko_ohjelmistot">Ohjelmistot ja työkalut</h3>
+        <div class="osaamislista">
+            <div class="osaaminen" data-type="tool" onclick="showDetails(this, 'blender_animation')">
+                <img src="../photos/blender_logo.png" alt="Blender logo">
+                <span class="nimi" data-i18n="animointi_blender">Blender 3D animointi</span>
+            </div>
+
+            <div class="osaaminen" data-type="tool" onclick="showDetails(this, 'blender_modeling')">
+                <img src="../photos/blender_logo.png" alt="Blender logo">
+                <span class="nimi" data-i18n="models_blender">Blender 3D-mallinnus</span>
+            </div>
+
+            <div class="osaaminen" data-type="tool" onclick="showDetails(this, 'unreal')">
+                <img src="../photos/unreal_engine_logo.png" alt="Unreal Engine 5 logo">
+                <span class="nimi">Unreal Engine 5</span>
+            </div>
+            <div class="osaaminen" data-type="tool" onclick="showDetails(this, 'github')">
+                <img src="../photos/github_logo.png" alt="Github logo">
+                <span class="nimi">Github</span>
+            </div>
+            <div class="osaaminen" data-type="tool" onclick="showDetails(this, 'git')">
+                <img src="../photos/git_logo.png" alt="Git logo">
+                <span class="nimi">Git</span>
+            </div>
+        </div>
+
+        <!-- Info box -->
+        <div id="dynamic-details" class="skill-info-box" style="display: none;"></div>
+    </section>
+
+    <div class="scroll-navigation">
+        <a href="aboutme.html" class="scroll-btn">
+            <img src="../photos/icons/arrow_back.svg" alt="Edellinen osio" class="arrow-icon">
+        </a>
+        <a href="projects.html" class="scroll-btn">
+            <img src="../photos/icons/arrow_forward.svg" alt="Seuraava osio" class="arrow-icon">
+        </a>
+    </div>
+
+    <footer class="site-footer">
+    </footer>
+
+    <script src="../js/kielidata.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/skills.js"></script>
+
+</body>
+
+</html>

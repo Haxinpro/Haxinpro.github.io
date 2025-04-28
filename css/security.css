@@ -1,0 +1,66 @@
+/* security.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111116;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f5f5f5;
+  }
+  
+  .security-container {
+    background-color: #1c1c24;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    max-width: 360px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .security-container h1 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #f5f5f5;
+  }
+  
+  .security-container input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #2b2b33;
+    color: #f5f5f5;
+  }
+  
+  .security-container button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #3292b8;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .security-container button:hover {
+    background-color: #277a98;
+  }
+  
+  .security-container .error-message {
+    color: #ff4c4c;
+    margin-top: 1rem;
+    display: none;
+  }
+
+  #error-message.show {
+    display: block;
+    color: #ff4c4c;
+  }

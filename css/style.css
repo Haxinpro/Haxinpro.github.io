@@ -1,0 +1,565 @@
+/* ------------------------------------------------------ */
+/* TEEMAT: Väriteemat, fontit ja yleiset asetukset */
+/* ------------------------------------------------------ */
+
+:root {
+  --columbia-blue: #B9D6F2;
+  --oxford-blue: #061A40;
+  --sapphire: #0353A4;
+  --bice-blue: #006DAA;
+  --prussian-blue: #003559;
+  --pearl-white: #F8F8F5;
+  --raisin-black: #131217;
+  --light-bg-gradient: linear-gradient(to bottom, #f0ebe5, #dcd6d0);
+  --dark-bg-gradient: linear-gradient(to bottom, #131217, #0e0e13);
+  --osaaminen-light: #d8d8d8;
+  --osaaminen-dark: #222;
+
+  --light-bg: #f3f4f6;
+  --dark-bg: var(--raisin-black);
+  --light-text: #2a2a2a;
+  --dark-text: var(--pearl-white);
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body {
+  background: var(--dark-bg-gradient);
+  color: var(--dark-text);
+  line-height: 1.6;
+  transition: background-color 0.4s, color 0.4s;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body.light-theme {
+  background: var(--light-bg-gradient);
+  color: var(--light-text);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+
+  text-align: center;
+  color: inherit;
+  font-weight: 700;
+}
+
+p, a, li, span, label {
+  color: inherit;
+}
+
+a:hover {
+  color: var(--columbia-blue);
+  text-decoration: underline;
+}
+
+/* ------------------------------------------------------ */
+/* HEADER */
+/* ------------------------------------------------------ */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #050505;
+  border: #575757 solid 1px;
+
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: var(--dark-text);
+}
+
+body.light-theme header {
+  background-color: #ffffff;
+  color: var(--light-text);
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.language-toggle {
+  display: flex;
+  gap: 1rem;
+}
+
+.language-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.language-btn:hover {
+  transform: scale(1.1);
+  background-color: #f0f0f0;
+}
+
+.flag-icon {
+  width: 30px;
+  height: 20px;
+  object-fit: cover;
+}
+
+.contact-btn {
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-left: 2rem;
+}
+
+/* Tumma teema (oletus) */
+body:not(.light-theme) .contact-btn {
+  background-color: var(--prussian-blue);
+}
+
+/* Vaalea teema */
+body.light-theme .contact-btn {
+  background-color: #dcd6d0; /* tai mikä väri toimii parhaiten */
+}
+
+.contact-btn:hover {
+  background-color: var(--bice-blue);
+}
+
+/* Tumman teeman hover */
+body:not(.light-theme) .contact-btn:hover {
+  background-color: var(--sapphire);
+}
+
+/* Vaalean teeman hover */
+body.light-theme .contact-btn:hover {
+  background-color: #dcd6d0;
+}
+body.light-theme .contact-btn {
+  background-color: #c0b7ae;
+  color: white;
+}
+
+/* ------------------------------------------------------ */
+/* SISÄLTÖ & KORTIT */
+/* ------------------------------------------------------ */
+
+section {
+  background-color: rgba(255, 255, 255, 0.92);
+  color: var(--light-text);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem auto;
+  width: 95%;
+  max-width: 1200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.profiilikuva img {
+  width: 400px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+body:not(.light-theme) section {
+  background-color: rgba(19, 18, 23, 0.92);
+  color: var(--dark-text);
+}
+
+.osaamislista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.osaaminen {
+  border-radius: 10px;
+  padding: 1rem;
+  width: 160px;
+  text-align: center;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, background-color 0.4s;
+  color: inherit;
+  background-color: transparent; /* oletus, yliajetaan teemassa */
+}
+
+body.light-theme .osaaminen {
+  background-color: #dcd6d0; /* vaalea harmaa erottumaan valkoisesta */
+  border: 1px solid #bbb;
+}
+
+body:not(.light-theme) .osaaminen {
+  background-color: #1e1e22; /* hieman taustaa vaaleampi */
+  border: 1px solid #333;
+}
+
+
+.osaaminen:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(160, 216, 240, 0.3);
+}
+
+.osaaminen img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 0.5rem;
+}
+
+.osaaminen .nimi {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.pisteet {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.pallo {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.pallo.täysi {
+  background-color: #1baa62;
+}
+
+/* Vaalea teema: muuta tyhjien pisteiden väri tummaksi */
+body.light-theme .pallo {
+  background-color: #ffffff;
+}
+
+body.light-theme .pallo.täysi {
+  background-color: #32b843;
+}
+
+/*Tumma teema*/
+body.dark-theme .pallo {
+  background-color: #312f2f;
+}
+
+body.dark-theme .pallo.täysi {
+  background-color: #1d6326;
+}
+
+/* INFO BOX - TYYLITYS */
+.info-box {
+  display: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  margin: 20px auto 0;
+  font-size: 0.95rem;
+  max-width: 700px;
+  text-align: center;
+  font-weight: 500;
+
+  /* Vaalea tila oletuksena */
+  background-color: #f7f7f7;
+  color: #333;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Tumma teema */
+body.dark-theme .info-box {
+  background-color: #1f1f1f;
+  color: #eee;
+  border: 1px solid #444;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+/* TOGGLE SWITCH */
+
+.teema-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.teema-toggle input {
+  display: none;
+}
+
+.toggle-label {
+  width: 70px;
+  height: 36px;
+  background-color: #dcd6d0;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+body:not(.light-theme) .toggle-label {
+  background-color: var(--oxford-blue);
+}
+
+.toggle-label::before,
+.toggle-label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.4;
+  transition: all 0.5s ease;
+}
+
+.toggle-label::before {
+  left: 18px;
+}
+
+.toggle-label::after {
+  right: 18px;
+}
+
+.toggle-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  background-color: white;
+  transition: transform 0.6s ease;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-icon .kuva {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  transition: opacity 0.6s ease;
+  opacity: 1;
+}
+
+.toggle-icon .moon {
+  opacity: 0;
+}
+
+#toggle:checked + .toggle-label .toggle-icon {
+  transform: translateX(34px);
+}
+
+#toggle:checked + .toggle-label .toggle-icon .sun {
+  opacity: 0;
+}
+
+#toggle:checked + .toggle-label .toggle-icon .moon {
+  opacity: 1;
+}
+
+/* PAINIKKEET */
+
+.button {
+  background-color: var(--sapphire);
+  color: var(--pearl-white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--bice-blue);
+}
+
+body.light-theme .button {
+  background-color: var(--bice-blue);
+  color: #ffffff;
+}
+
+body.light-theme .button:hover {
+  background-color: var(--prussian-blue);
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 800px) {
+  .nav-links {
+    display: none;
+  }
+
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+  }
+}
+
+
+/* ------------------------------------------------------ */
+/* YLEISET: SLIDE-OSIOIDEN TYYLIT JA SCROLL-NEXT-PAINIKKEET */
+/* ------------------------------------------------------ */
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-margin-top: 80px;
+}
+
+.scroll-next {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--sapphire);
+  color: var(--pearl-white);
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-next:hover {
+  background-color: var(--bice-blue);
+  transform: scale(1.05);
+}
+
+body.light-theme .scroll-next {
+  background-color: var(--bice-blue);
+  color: #ffffff;
+}
+
+body.light-theme .scroll-next:hover {
+  background-color: var(--prussian-blue);
+}
+
+
+/* ------------------------------------------------------ */
+/* MINUSTA */
+/* ------------------------------------------------------ */
+
+.section-minusta h2 {
+  font-size: 2.5rem;
+}
+
+.section-minusta p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  text-align: center;
+}
+
+
+/* ------------------------------------------------------ */
+/* OSAAMISET */
+/* ------------------------------------------------------ */
+
+.section-osaamiset h2 {
+  font-size: 2.3rem;
+}
+
+.section-osaamiset .osaaminen {
+  border: 2px solid var(--sapphire);
+}
+
+
+/* ------------------------------------------------------ */
+/* PROJEKTIT */
+/* ------------------------------------------------------ */
+
+.section-projektit h2 {
+  font-size: 2.3rem;
+}
+
+.section-projektit p {
+  max-width: 700px;
+  text-align: center;
+  opacity: 0;
+}
+
+
+/* ------------------------------------------------------ */
+/* FIND ME */
+/* ------------------------------------------------------ */
+
+.section-findme h2 {
+  font-size: 2.3rem;
+}
+
+.section-findme .social-icons a {
+  margin: 0 1rem;
+}
+
+
+/* ------------------------------------------------------ */
+/* YHTEYSTIEDOT */
+/* ------------------------------------------------------ */
+
+.section-yhteystiedot h2 {
+  font-size: 2.3rem;
+}
+
+.section-yhteystiedot .contact-form {
+  width: 100%;
+  max-width: 600px;
+}

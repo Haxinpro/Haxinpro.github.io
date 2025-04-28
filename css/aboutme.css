@@ -1,0 +1,151 @@
+/* ------------------------------------------------------ */
+/* ABOUT ME (MINUSTA-OSIO) - UUSI JÄRJESTELMÄ */
+/* ------------------------------------------------------ */
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    padding: 5rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #333230, #212327);
+    background-size: 200% 200%;
+    animation: gradientShift 10s ease infinite;
+}
+
+.about-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    padding: 0 3rem;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.about-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-card.reversed {
+    flex-direction: row-reverse;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    min-width: 320px;
+    max-width: 500px;
+    position: relative;
+    cursor: pointer;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.about-text {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.about-card.visible .about-text h2 {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.about-text p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+/* Teemat */
+body.dark-theme .about-text {
+    color: #f0f0f0;
+}
+
+body.light-theme .about-text {
+    color: #222;
+}
+/* Vaalea teema */
+body.light-theme .about-section {
+    background: linear-gradient(135deg, #f5f0e8, #ede2d0);
+  }
+
+  #paladin-click-img {
+    width: 100%;
+    max-width: 400px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  .fade-switch {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+  }
+  
+  .fade-switch.visible {
+    opacity: 1;
+  }
+
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Responsiivisuus */
+@media (max-width: 1000px) {
+    .about-card,
+    .about-card.reversed {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .about-image img {
+        max-width: 90vw;
+    }
+
+    .about-text h2 {
+        font-size: 2rem;
+    }
+
+    .about-text p {
+        font-size: 1.05rem;
+        padding: 0 1rem;
+    }
+}

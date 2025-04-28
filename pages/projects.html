@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="otsikko_projektit">Projektit</title>
+
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/projects.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+
+    <script>
+        const isAuthed = localStorage.getItem("authenticated");
+        const savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme === "light") {
+            document.documentElement.classList.add("light-theme");
+            document.body?.classList.add("light-theme");
+        }
+
+        if (isAuthed !== "true") {
+            window.location.href = "../index.html";
+        } else {
+            document.body.classList.remove("hidden-until-auth");
+        }
+    </script>
+</head>
+
+<body>
+    <header class="navbar-outer">
+        <div class="navbar">
+            <div class="logo" data-i18n="logo">Teemu Karne</div>
+
+            <nav class="nav-links" role="navigation" aria-label="Päävalikko">
+                <a href="welcome.html" data-i18n="tervetuloa">Tervetuloa</a>
+                <a href="aboutme.html" data-i18n="minusta">Minusta</a>
+                <a href="skills.html" data-i18n="osaamiset">Osaamiset</a>
+                <a href="projects.html" data-i18n="projektit">Projektit</a>
+                <a href="contact.html" data-i18n="yhteystiedot">Yhteystiedot</a>
+            </nav>
+
+            <div class="header-controls">
+                <div class="language-toggle">
+                    <button class="language-btn" onclick="switchLanguage('fi')" data-i18n="suomi">
+                        <img src="../photos/icons/fi_flag.svg" alt="Suomi" class="flag-icon" />
+                    </button>
+                    <button class="language-btn" onclick="switchLanguage('en')" data-i18n="english">
+                        <img src="../photos/icons/gb_flag.svg" alt="English" class="flag-icon" />
+                    </button>
+                </div>
+
+                <div class="teema-toggle">
+                    <input type="checkbox" id="toggle" />
+                    <label for="toggle" class="toggle-label">
+                        <div class="toggle-icon">
+                            <img src="../photos/icons/sun.svg" class="kuva sun" alt="Sun" />
+                            <img src="../photos/icons/moon.svg" class="kuva moon" alt="Moon" />
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <a href="contact.html" class="btn contact-btn" data-i18n="ota_yhteytta">Ota yhteyttä</a>
+
+            <div class="hamburger" onclick="toggleMenu()">
+                <img id="menu-icon" src="../photos/icons/menu.svg" alt="Menu" />
+                <img id="close-icon" src="../photos/icons/close.svg" alt="Sulje" style="display: none;" />
+            </div>
+
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="welcome.html" data-i18n="tervetuloa">Tervetuloa</a>
+                <a href="aboutme.html" data-i18n="minusta">Minusta</a>
+                <a href="skills.html" data-i18n="osaamiset">Osaamiset</a>
+                <a href="projects.html" data-i18n="projektit">Projektit</a>
+                <a href="contact.html" class="btn contact-btn" data-i18n="ota_yhteytta">Ota yhteyttä</a>
+
+                <div class="mobile-settings">
+                    <div class="language-toggle">
+                        <button class="language-btn" onclick="switchLanguage('fi')">
+                            <img src="../photos/icons/fi_flag.svg" alt="Suomi" class="flag-icon" />
+                        </button>
+                        <button class="language-btn" onclick="switchLanguage('en')">
+                            <img src="../photos/icons/gb_flag.svg" alt="English" class="flag-icon" />
+                        </button>
+                    </div>
+                    <div class="teema-toggle">
+                        <input type="checkbox" id="toggle-mobile" />
+                        <label for="toggle-mobile" class="toggle-label">
+                            <div class="toggle-icon">
+                                <img src="../photos/icons/sun.svg" class="kuva sun" alt="Sun" />
+                                <img src="../photos/icons/moon.svg" class="kuva moon" alt="Moon" />
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+  <!-- PROJEKTIT -->
+  <section id="projektit" class="section-projektit">
+    <div class="project-intro">
+        <h2 data-i18n="otsikko_projektit">Projektini</h2>
+        <p data-i18n="teksti_projektit">Alta löydät muutamia esimerkkejä projekteistani.</p>
+        <div class="project-filters-wrapper">
+            <button class="filter-btn all-btn active" data-filter="all" data-i18n="filtteri_kaikki">Kaikki</button>
+
+            <div class="filter-toggles">
+                <button class="category-toggle" data-category="pelimoottorit"
+                    data-i18n="pelimoottorit">Pelimoottorit</button>
+                <button class="category-toggle" data-category="ohjelmointi"
+                    data-i18n="ohjelmointi">Ohjelmointi</button>
+                <button class="category-toggle" data-category="3d" data-i18n="filtteri_3d">3D & Design</button>
+                <button class="category-toggle" data-category="tyokalut" data-i18n="tyokalut">Työkalut</button>
+            </div>
+
+            <!-- Filtterit -->
+            <div class="filter-options" id="pelimoottorit">
+                <button class="filter-btn" data-filter="unity">Unity</button>
+                <button class="filter-btn" data-filter="unreal">Unreal Engine 5</button>
+                <button class="filter-btn" data-filter="godot">Godot</button>
+            </div>
+
+            <div class="filter-options" id="ohjelmointi">
+                <button class="filter-btn" data-filter="csharp">C#</button>
+                <button class="filter-btn" data-filter="cplusplus">C++</button>
+                <button class="filter-btn" data-filter=".net">.NET Console</button>
+                <button class="filter-btn" data-filter=".js">JavaScript</button>
+                <button class="filter-btn" data-filter=".html">HTML</button>
+                <button class="filter-btn" data-filter=".css">CSS</button>
+            </div>
+
+            <div class="filter-options" id="3d">
+                <button class="filter-btn" data-filter="blender">Blender</button>
+                <button class="filter-btn" data-filter="animation" data-i18n="filtteri_animointi">Animointi</button>
+                <button class="filter-btn" data-filter="rigging"
+                    data-i18n="filtteri_rigging">Luurankorakennus</button>
+                <button class="filter-btn" data-filter="sculping"
+                    data-i18n="filtteri_mallinnus">3D-Mallinnus</button>
+            </div>
+
+            <div class="filter-options" id="tyokalut">
+                <button class="filter-btn" data-filter="vsc">Visual Studio Code</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="project-container">
+        <!-- Projektikortti 1 -->
+        <div class="project-card" data-tags="csharp .net vsc">
+            <div class="project-image">
+                <img src="../photos/minigames.PNG" alt="Projekti 1">
+                <div class="zoom-icon">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="project-text">
+                <h3 data-i18n="projekti1_otsikko">Visual Studio Code - minipelit</h3>
+                <p data-i18n="projekti1_teksti">
+                    Rakensin Visual Studio Code -editoriin minipelejä, jotka toimivat terminaalissa. Peleihin
+                    sisältyy yksinkertaisista kolikonheitosta monimutkaisempaan
+                    "ristinollaan" ja muistipeliin. Kokeile itse!
+                </p>
+                <a href="https://github.com/Haxinpro/Projektini" target="_blank">GitHub</a>
+
+                <hr class="project-divider">
+
+                <div class="project-badges">
+                    <span class="badge">C#</span>
+                    <span class="badge">.NET Console</span>
+                    <span class="badge">Visual Studio Code</span>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Projektikortti 2 -->
+        <div class="project-card reversed" data-tags="csharp unity vsc">
+            <div class="project-image">
+                <img src="../photos/flipping.PNG" alt="Projekti 2">
+                <div class="zoom-icon">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="project-text">
+                <h3 data-i18n="projekti2_otsikko">Finnish College Jam 7</h3>
+                <p data-i18n="projekti2_teksti">
+                    Osallistuin Finnish College Jam 7 -pelinkehityskilpailuun, jossa tein 4 päivän aikana kahden
+                    kollegani kanssa pelin nimeltä "Flipping birds".
+                    Pelissä pelaaja ohjaa hahmoa ja väistää esteitä. Tavoitteena on kerätä mahdollisimman paljon
+                    pisteitä ja mitä useammin kuolee, sitä enemmän peli menee "rikki".
+                    Pääset lataamaan pelin alla olevan linkin kautta.
+                </p>
+                <div class="link-row">
+                    <a href="https://itch.io/jam/finnish-college-jam-7" target="_blank">Finnish College Game Jam</a>
+                    <a href="https://haxinpro.itch.io/flipping-birds" target="_blank"
+                        data-i18n="projekti2_linkki">Lataa peli täältä</a>
+                </div>
+
+                <hr class="project-divider">
+
+                <div class="project-badges">
+                    <span class="badge">C#</span>
+                    <span class="badge">Unity</span>
+                    <span class="badge">Visual Studio Code</span>
+                </div>
+            </div>
+        </div>
+        <!-- Projektikortti 3 -->
+        <div class="project-card" data-tags="blender animation rigging">
+            <div class="project-image carousel" id="carousel-blender">
+                <img src="../videos/Blender-Animation.gif" alt="Projekti 3 - animaatio"
+                    class="carousel-item active">
+                <img src="../photos/blender_skeleton.png" alt="Projekti 3 - kuva" class="carousel-item">
+                <img src="../photos/blender_crouch.PNG" alt="Projekti 3 - kuva 2" class="carousel-item">
+                <img src="../videos/Blender_animation2.gif" alt="Projekti 3 - animaatio2" class="carousel-item">
+                <div class="zoom-icon">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+
+                <!-- Nuolinapit -->
+                <button class="carousel-btn prev"
+                    onclick="prevSlide(this.closest('.carousel').id)">&#10094;</button>
+                <button class="carousel-btn next"
+                    onclick="nextSlide(this.closest('.carousel').id)">&#10095;</button>
+
+
+                <!-- Pisteet -->
+                <div class="dot-container" id="dots-carousel-blender"></div>
+            </div>
+
+            <div class="project-text">
+                <h3 data-i18n="projekti3_otsikko">Blender animointi</h3>
+                <p data-i18n="projekti3_teksti">
+                    Blenderissä luotu lyhyt animaatio, jossa on pelihahmo ja perus kävely animaatio.
+                    Animaatio on tehty Blenderissä alusta loppuun sen luurankoa myöten.
+                    Hahmo on Unreal enginen oletushahmo, jolle on tehty uusi luuranko ja animaatiot. Se on
+                    tarkoitus
+                    lisätä kouluprojektiin, jossa käytetään Unreal Engineä.
+                </p>
+                <!-- <a href="https://github.com/Haxinpro/kirjasuosittelija" target="_blank">GitHub</a> -->
+                <hr class="project-divider">
+
+                <div class="project-badges">
+                    <span class="badge">Blender</span>
+                    <span class="badge" data-i18n="animation">Animation</span>
+                    <span class="badge" data-i18n="rigging">Rigging</span>
+                </div>
+            </div>
+        </div>
+        <!-- Projektikortti 4 -->
+        <div class="project-card reversed" data-tags="blender sculping">
+            <div class="project-image carousel" id="carousel-blender3">
+                <img src="../photos/pirate_ship.PNG" alt="Projekti 4 - kuva 1" class="carousel-item">
+                <img src="../photos/pirate_ship2.PNG" alt="Projekti 4 - kuva 2" class="carousel-item">
+                <img src="../photos/pirate_ship3.PNG" alt="Projekti 4 - kuva 3" class="carousel-item">
+                <img src="../photos/pirate_ship4.PNG" alt="Projekti 4 - kuva 4" class="carousel-item">
+                <img src="../photos/pirate_ship5.PNG" alt="Projekti 4 - kuva 5" class="carousel-item">
+                <img src="../photos/pirate_ship6.PNG" alt="Projekti 4 - kuva 6" class="carousel-item">
+                <img src="../photos/pirate_ship7.PNG" alt="Projekti 4 - kuva 7" class="carousel-item">
+                <div class="zoom-icon">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+                <!-- Nuolinapit -->
+                <button class="carousel-btn prev"
+                    onclick="prevSlide(this.closest('.carousel').id)">&#10094;</button>
+                <button class="carousel-btn next"
+                    onclick="nextSlide(this.closest('.carousel').id)">&#10095;</button>
+
+
+                <!-- Pisteet -->
+                <div class="dot-container" id="dots-carousel-blender3"></div>
+            </div>
+            <div class="project-text">
+                <h3 data-i18n="projekti4_otsikko">Blender 3D-mallinnus</h3>
+                <p data-i18n="projekti4_teksti">
+                    Blenderissä luotu 3D-malli (prototyyppi), jossa on laiva ja perus yksityiskohtia. Malli on tehty
+                    alusta alkaen, mutta sitä en koskaan saanut maalausvaiheeseen.
+                </p>
+                <a href="viewer/viewer2.html" data-i18n="viewer">Katso 3D‑mallia</a>
+
+                <hr class="project-divider">
+
+                <div class="project-badges">
+                    <span class="badge">Blender</span>
+                    <span class="badge" data-i18n="modeling">3D-Modeling</span>
+                </div>
+            </div>
+        </div>
+        <!-- Projektikortti 5 -->
+        <div class="project-card" data-tags="blender animation rigging sculping">
+            <div class="project-image carousel" id="carousel-blender2">
+                <img src="../videos/Blender_fish1.gif" alt="Projekti 5 - animaatio3" class="carousel-item active">
+                <img src="../videos/Blender_fish2.gif" alt="Projekti 5 - animaatio4" class="carousel-item">
+                <img src="../videos/Blender_fish3.gif" alt="Projekti 5 - animaatio5" class="carousel-item">
+                <img src="../photos/blender_fish.PNG" alt="Projekti 5 - kuva 4" class="carousel-item">
+                <img src="../photos/blender_fish2.PNG" alt="Projekti 5 - kuva 5" class="carousel-item">
+                <img src="../photos/blender_fish3.PNG" alt="Projekti 5 - kuva 6" class="carousel-item">
+                <div class="zoom-icon">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+
+                <!-- Nuolinapit -->
+                <button class="carousel-btn prev"
+                    onclick="prevSlide(this.closest('.carousel').id)">&#10094;</button>
+                <button class="carousel-btn next"
+                    onclick="nextSlide(this.closest('.carousel').id)">&#10095;</button>
+
+
+                <!-- Pisteet -->
+                <div class="dot-container" id="dots-carousel-blender2"></div>
+            </div>
+
+
+
+            <div class="project-text">
+                <h3 data-i18n="projekti5_otsikko">Blender harjoittelua</h3>
+                <p data-i18n="projekti5_teksti">
+                    Blenderissä luotu lyhyt animaatio ja malli, jossa on kala ja perus uinti animaatio.
+                </p>
+                <a href="viewer/viewer1.html" data-i18n="viewer">Katso 3D‑mallia</a>
+                <hr class="project-divider">
+
+                <div class="project-badges">
+                    <span class="badge">Blender</span>
+                    <span class="badge" data-i18n="animation">Animation</span>
+                    <span class="badge" data-i18n="rigging">Rigging</span>
+                    <span class="badge" data-i18n="modeling">3D-Modeling</span>
+                </div>
+            </div>
+        </div>
+        <!-- Projektikortti 6 -->
+        <div class="project-card reversed" data-tags=".html .css .js">
+            <div class="project-image carousel" id="carousel-blender4">
+                <div class="zoom-icon">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="project-text">
+                <h3 data-i18n="projekti6_otsikko">Oma portfolio sivuni</h3>
+                <p data-i18n="projekti6_teksti">
+                    Portfolio
+                </p>
+                <!-- <a href="https://github.com/Haxinpro/Projektini" target="_blank">GitHub</a> -->
+
+                <hr class="project-divider">
+
+                <div class="project-badges">
+                    <span class="badge">.HTML</span>
+                    <span class="badge">.CSS</span>
+                    <span class="badge">.JavaScript</span>
+
+                </div>
+            </div>
+        </div>
+</section>
+
+
+<div class="scroll-navigation">
+    <a href="skills.html" class="scroll-btn">
+        <img src="../photos/icons/arrow_back.svg" alt="Edellinen osio" class="arrow-icon">
+    </a>
+    <a href="contact.html" class="scroll-btn">
+        <img src="../photos/icons/arrow_forward.svg" alt="Seuraava osio" class="arrow-icon">
+    </a>
+</div>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()"></div>
+
+
+
+<footer class="site-footer">
+</footer>
+
+<script src="../js/kielidata.js"></script>
+<script src="../js/script.js"></script>
+<script src="../js/photos.js"></script>
+</body>
+
+</html>

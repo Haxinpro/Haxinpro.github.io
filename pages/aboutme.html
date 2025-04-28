@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="otsikko_minusta">Minusta</title>
+
+    <script>
+        const isAuthed = localStorage.getItem("authenticated");
+        const savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme === "light") {
+            document.documentElement.classList.add("light-theme");
+            document.body?.classList.add("light-theme");
+        }
+
+        if (isAuthed !== "true") {
+            window.location.href = "../index.html";
+        } else {
+            document.body.classList.remove("hidden-until-auth");
+        }
+    </script>
+
+
+
+    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="../css/aboutme.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="navbar-outer">
+        <div class="navbar">
+            <div class="logo" data-i18n="logo">Nimesi</div>
+
+            <nav class="nav-links" role="navigation" aria-label="Päävalikko">
+                <a href="welcome.html" data-i18n="tervetuloa">Tervetuloa</a>
+                <a href="aboutme.html" data-i18n="minusta">Minusta</a>
+                <a href="skills.html" data-i18n="osaamiset">Osaamiset</a>
+                <a href="projects.html" data-i18n="projektit">Projektit</a>
+                <a href="contact.html" data-i18n="yhteystiedot">Yhteystiedot</a>
+            </nav>
+
+            <div class="header-controls">
+                <div class="language-toggle">
+                    <button class="language-btn" onclick="switchLanguage('fi')" data-i18n="suomi">
+                        <img src="../photos/icons/fi_flag.svg" alt="Suomi" class="flag-icon" />
+                    </button>
+                    <button class="language-btn" onclick="switchLanguage('en')" data-i18n="english">
+                        <img src="../photos/icons/gb_flag.svg" alt="English" class="flag-icon" />
+                    </button>
+                </div>
+
+                <div class="teema-toggle">
+                    <input type="checkbox" id="toggle" />
+                    <label for="toggle" class="toggle-label">
+                        <div class="toggle-icon">
+                            <img src="../photos/icons/sun.svg" class="kuva sun" alt="Sun" />
+                            <img src="../photos/icons/moon.svg" class="kuva moon" alt="Moon" />
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <a href="contact.html" class="btn contact-btn" data-i18n="ota_yhteytta">Contact Me</a>
+
+            <div class="hamburger" onclick="toggleMenu()">
+                <img id="menu-icon" src="../photos/icons/menu.svg" alt="Menu" />
+                <img id="close-icon" src="../photos/icons/close.svg" alt="Sulje" style="display: none;" />
+            </div>
+
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="welcome.html" data-i18n="tervetuloa">Tervetuloa</a>
+                <a href="aboutme.html" data-i18n="minusta">Minusta</a>
+                <a href="skills.html" data-i18n="osaamiset">Osaamiset</a>
+                <a href="projects.html" data-i18n="projektit">Projektit</a>
+                <a href="contact.html" class="btn contact-btn" data-i18n="ota_yhteytta">Ota yhteyttä</a>
+
+                <div class="mobile-settings">
+                    <div class="language-toggle">
+                        <button class="language-btn" onclick="switchLanguage('fi')" data-i18n="suomi">
+                            <img src="../photos/icons/fi_flag.svg" alt="Suomi" class="flag-icon" />
+                        </button>
+                        <button class="language-btn" onclick="switchLanguage('en')" data-i18n="english">
+                            <img src="../photos/icons/gb_flag.svg" alt="English" class="flag-icon" />
+                        </button>
+                    </div>
+
+                    <div class="teema-toggle">
+                        <input type="checkbox" id="toggle-mobile" />
+                        <label for="toggle-mobile" class="toggle-label">
+                            <div class="toggle-icon">
+                                <img src="../photos/icons/sun.svg" class="kuva sun" alt="Sun" />
+                                <img src="../photos/icons/moon.svg" class="kuva moon" alt="Moon" />
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="about-section">
+        <div class="about-card">
+            <div class="about-image">
+                <img src="../photos/mina.png" alt="Yleista">
+            </div>
+            <div class="about-text">
+                <h2 data-i18n="otsikko_minusta1">Minusta</h2>
+                <p data-i18n="teksti_minusta1">
+                    Tässä voit kertoa kuka olet ja mitä teet. Olen intohimoinen kehittäjä, jolla on kokemusta
+                    ohjelmoinnista, pelikehityksestä ja visuaalisesta suunnittelusta.
+                </p>
+            </div>
+        </div>
+
+        <div class="about-card reversed">
+            <div class="about-image">
+                <img src="../photos/mina.png" alt="Mina">
+            </div>
+            <div class="about-text">
+                <h2 data-i18n="otsikko_minusta2">Mitä teen vapaa-ajallani?</h2>
+                <p data-i18n="teksti_minusta2">
+                    Vapaa-ajallani kehitän pelejä ja verkkosivuja, piirrän, opin uutta ja seuraan teknologiaa.
+                </p>
+            </div>
+        </div>
+
+        <div class="about-card">
+            <div class="about-image">
+                <img src="../photos/gaming.jpg" alt="Vapaa">
+            </div>
+            <div class="about-text">
+                <h2 data-i18n="otsikko_minusta3">Otsikko</h2>
+                <p data-i18n="teksti_minusta3">Teksti oikealla puolella.</p>
+            </div>
+        </div>
+
+        <div class="about-card reversed">
+            <div class="about-image">
+                <img id="paladin-click-img" src="../photos/paladin.png" alt="Paladin Easter Egg">
+            </div>
+            <div class="about-text">
+                <h2 data-i18n="otsikko_minusta4">Mitä teen vapaa-ajallani?</h2>
+                <p data-i18n="teksti_minusta4">
+                    Vapaa-ajallani kehitän pelejä ja verkkosivuja, piirrän, opin uutta ja seuraan teknologiaa.
+                </p>
+            </div>
+        </div>
+
+        <div class="about-card">
+            <div class="about-image">
+                <img src="../photos/mina.png" alt="Paladin">
+            </div>
+            <div class="about-text">
+                <h2 data-i18n="otsikko_minusta5">Mietelauseeni</h2>
+                <p data-i18n="teksti_minusta5">Teksti oikealla puolella.</p>
+            </div>
+        </div>
+
+        <div class="about-card reversed">
+            <div class="about-text">
+                <h2 data-i18n="otsikko_minusta6">Nopeita faktoja</h2>
+                <ul class="quick-facts" data-i18n="quickfacts">
+                    <li data-i18n="quickfact_1">🎮 World of Warcraft, Stardew Valley...</li>
+                    <li data-i18n="quickfact_2">☕ Lempijuoma? → Virvoitusjuomat...</li>
+                    <li data-i18n="quickfact_3">🎯 Unelmaprojekti: Merirosvo co-op peli</li>
+                    <li data-i18n="quickfact_4">🎓 Tavoite: Gamedev</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="scroll-navigation">
+        <a href="welcome.html" class="scroll-btn">
+            <img src="../photos/icons/arrow_back.svg" alt="Edellinen osio" class="arrow-icon">
+        </a>
+        <a href="skills.html" class="scroll-btn">
+            <img src="../photos/icons/arrow_forward.svg" alt="Seuraava osio" class="arrow-icon">
+        </a>
+    </div>
+
+    <footer class="site-footer">
+    </footer>
+
+    <script src="../js/kielidata.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/aboutme.js"></script>
+</body>
+
+</html>

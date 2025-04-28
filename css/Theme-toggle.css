@@ -1,0 +1,90 @@
+/* === BODY & BACKGROUND === */
+body.light-theme {
+  background: var(--light-bg-gradient);
+  color: var(--light-text);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* === HEADER === */
+body.light-theme header {
+  background-color: #ffffff;
+  color: var(--light-text);
+}
+
+/* === CONTACT BUTTON (perustyyli ja hover) === */
+body:not(.light-theme) .contact-btn {
+  background-color: var(--prussian-blue);
+}
+
+body.light-theme .contact-btn {
+  background-color: #c0b7ae;
+  color: white;
+}
+
+body:not(.light-theme) .contact-btn:hover {
+  background-color: var(--sapphire);
+}
+
+body.light-theme .contact-btn:hover {
+  background-color: #c0b7ae;
+}
+
+/* === SECTION BACKGROUND === */
+body:not(.light-theme) section {
+  background-color: rgba(19, 18, 23, 0.92);
+  color: var(--dark-text);
+}
+
+/* === OSAAMINEN KORTIT === */
+body.light-theme .osaaminen {
+  --osaaminen-light: #f4f4f4;
+  --osaaminen-light-border: #bbb;
+}
+
+body.dark-theme .osaaminen {
+  background-color: #1A1A1D;
+  border: 1px solid #444;
+}
+
+/* === PISTEET KUVAT (Pallot) === */
+body.dark-theme .pallo {
+  background-color: #000000;
+}
+
+body.dark-theme .pallo.täysi {
+  background-color: #ffffff;
+}
+
+/* === INFO BOX === */
+body.dark-theme .info-box {
+  background-color: #1f1f1f;
+  color: #eee;
+  border: 1px solid #444;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+/* === TOGGLE SWITCH: TUMMAN TEEMAN TAUSTAVÄRI === */
+body:not(.light-theme) .toggle-label {
+  background-color: var(--oxford-blue);
+}
+
+/* === BUTTONIT YLEISESTI === */
+body.light-theme .button {
+  background-color: var(--bice-blue);
+  color: #ffffff;
+}
+
+body.light-theme .button:hover {
+  background-color: var(--prussian-blue);
+}
+
+/* === Valikko.css === */
+
+body.light-theme .mobile-menu {
+  background-color: #ffffff;
+  border-top: 2px solid var(--bice-blue);
+  border-bottom: 2px solid var(--bice-blue);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
